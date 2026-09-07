@@ -154,5 +154,10 @@ See [ROUTINE.md](ROUTINE.md) for the exact recurring-check prompt.
 
 ## Where this lives
 
-`/Users/leelay2.0/Repo/fpl-championship-tracker` on this Mac. The scheduled
-task runs there.
+Its own repo: <https://github.com/CrenshawCrocodile/epl_championship_fantasy>
+(relocated out of the pickem-war-room repo on 2026-09-07 — it was unrelated to
+that Next.js/Vercel betting app and just cluttered it). Kept separate from
+pickem-war-room and from `gunnersdelight` (the Rosner's Relegation tracker), so
+each FPL tracker lives in its own repo. Clone this repo wherever the scheduled
+task runs; every build recomputes the season from the API, so there is no local
+state to carry between machines.

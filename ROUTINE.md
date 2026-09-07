@@ -1,6 +1,7 @@
 # Recurring check: FPL - Championship tracker
 
 Artifact: <https://claude.ai/code/artifact/18b62565-da55-4199-9262-73ebdde14b76>
+Repo: <https://github.com/CrenshawCrocodile/epl_championship_fantasy>
 
 Runs on a **claude.ai scheduled task**, not an in-session cron. In-session
 crons die with the session; a scheduled task persists and starts a fresh
@@ -23,8 +24,9 @@ Paste this verbatim as the scheduled task's instructions.
 > Update the FPL - Championship tracker at
 > https://claude.ai/code/artifact/18b62565-da55-4199-9262-73ebdde14b76
 >
-> Work in the project directory containing `build_tracker.py`, `fetch_fpl.py`
-> and `template.html`.
+> Clone <https://github.com/CrenshawCrocodile/epl_championship_fantasy> and
+> work in it — it contains `build_tracker.py`, `fetch_fpl.py` and
+> `template.html`.
 >
 > 1. **Read the live artifact first.** Call the Artifact tool with
 >    `action: "read"` and that URL. Do this before anything else: a publish

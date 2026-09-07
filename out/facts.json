@@ -1,0 +1,834 @@
+{
+  "1": {
+    "gw": 1,
+    "managers": 21,
+    "leader": {
+      "team": "Ming Dynasty",
+      "manager": "Ming Alterman",
+      "total": 62,
+      "gwPts": 62
+    },
+    "leadChanged": false,
+    "previousLeader": null,
+    "leadMargin": 4,
+    "highestScore": {
+      "team": "Ming Dynasty",
+      "manager": "Ming Alterman",
+      "pts": 62,
+      "rank": 1
+    },
+    "lowestScore": {
+      "team": "Show Me The Mane",
+      "manager": "Damir Becirovic",
+      "pts": 34,
+      "rank": 21
+    },
+    "medianScore": 49,
+    "biggestRiser": null,
+    "biggestFaller": null,
+    "mostCaptained": {
+      "name": "Haaland",
+      "pos": "FWD",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "count": 13,
+      "total": 21,
+      "pts": 2
+    },
+    "topPlayer": {
+      "name": "M.Sangaré",
+      "pos": "MID",
+      "team": "Brentford",
+      "color": "#E30613",
+      "pts": 14,
+      "count": 1,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 17,
+        "total": 21,
+        "gwPts": 2,
+        "seasonPts": 2
+      },
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 16,
+        "total": 21,
+        "gwPts": 11,
+        "seasonPts": 11
+      },
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 16,
+        "total": 21,
+        "gwPts": 2,
+        "seasonPts": 2
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "bboost",
+        "label": "Bench Boost",
+        "count": 1,
+        "teams": [
+          "Ming Dynasty"
+        ]
+      }
+    ],
+    "totalTransfers": 0,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "Ming Dynasty",
+        "manager": "Ming Alterman",
+        "total": 62,
+        "gwPts": 62,
+        "move": null
+      },
+      {
+        "rank": 2,
+        "team": "Bean and Bun",
+        "manager": "Jacob Stern",
+        "total": 58,
+        "gwPts": 58,
+        "move": null
+      },
+      {
+        "rank": 3,
+        "team": "McCarren Park FC",
+        "manager": "Zach Silverman",
+        "total": 57,
+        "gwPts": 57,
+        "move": null
+      },
+      {
+        "rank": 3,
+        "team": "You're My Wonderwall",
+        "manager": "Nikhil Basu Trivedi",
+        "total": 57,
+        "gwPts": 57,
+        "move": null
+      },
+      {
+        "rank": 5,
+        "team": "Chelsea United",
+        "manager": "Dmitry Gritskevich",
+        "total": 55,
+        "gwPts": 55,
+        "move": null
+      },
+      {
+        "rank": 6,
+        "team": "Soccer Time",
+        "manager": "Sam Silverman",
+        "total": 54,
+        "gwPts": 54,
+        "move": null
+      },
+      {
+        "rank": 7,
+        "team": "True Baleba FC",
+        "manager": "Benjy Boateng",
+        "total": 52,
+        "gwPts": 52,
+        "move": null
+      },
+      {
+        "rank": 8,
+        "team": "Bushwick Gunners",
+        "manager": "Juan David Anez Pineda",
+        "total": 51,
+        "gwPts": 51,
+        "move": null
+      },
+      {
+        "rank": 9,
+        "team": "Keith's Team",
+        "manager": "Keith Ryu",
+        "total": 50,
+        "gwPts": 50,
+        "move": null
+      },
+      {
+        "rank": 9,
+        "team": "Kroos Control",
+        "manager": "Ali Altaf",
+        "total": 50,
+        "gwPts": 50,
+        "move": null
+      },
+      {
+        "rank": 11,
+        "team": "Bruno D'Or",
+        "manager": "Nihar Bobba",
+        "total": 49,
+        "gwPts": 49,
+        "move": null
+      },
+      {
+        "rank": 12,
+        "team": "Ctrl Alt Deligt",
+        "manager": "John Bonten",
+        "total": 48,
+        "gwPts": 48,
+        "move": null
+      },
+      {
+        "rank": 12,
+        "team": "Odegardian of Galaxy",
+        "manager": "manji pal",
+        "total": 48,
+        "gwPts": 48,
+        "move": null
+      },
+      {
+        "rank": 12,
+        "team": "The Spice Boys",
+        "manager": "Tony Lashley",
+        "total": 48,
+        "gwPts": 48,
+        "move": null
+      },
+      {
+        "rank": 15,
+        "team": "JimSmiley Loves LUFC",
+        "manager": "Greg Bettinelli",
+        "total": 47,
+        "gwPts": 47,
+        "move": null
+      },
+      {
+        "rank": 16,
+        "team": "Salibaba & Mama",
+        "manager": "Mazen Alawar",
+        "total": 45,
+        "gwPts": 45,
+        "move": null
+      },
+      {
+        "rank": 17,
+        "team": "Mamoon's Team",
+        "manager": "Mamoon Hamid",
+        "total": 43,
+        "gwPts": 43,
+        "move": null
+      },
+      {
+        "rank": 18,
+        "team": "Michael's Team",
+        "manager": "Michael Spiro",
+        "total": 41,
+        "gwPts": 41,
+        "move": null
+      },
+      {
+        "rank": 18,
+        "team": "Thierry Enrique",
+        "manager": "Diego Auvert",
+        "total": 41,
+        "gwPts": 41,
+        "move": null
+      },
+      {
+        "rank": 20,
+        "team": "Macrinus",
+        "manager": "Lyle Adams",
+        "total": 38,
+        "gwPts": 38,
+        "move": null
+      },
+      {
+        "rank": 21,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 34,
+        "gwPts": 34,
+        "move": null
+      }
+    ]
+  },
+  "2": {
+    "gw": 2,
+    "managers": 21,
+    "leader": {
+      "team": "Ctrl Alt Deligt",
+      "manager": "John Bonten",
+      "total": 175,
+      "gwPts": 127
+    },
+    "leadChanged": true,
+    "previousLeader": {
+      "team": "Ming Dynasty",
+      "total": 62,
+      "rank": 4
+    },
+    "leadMargin": 4,
+    "highestScore": {
+      "team": "JimSmiley Loves LUFC",
+      "manager": "Greg Bettinelli",
+      "pts": 128,
+      "rank": 1
+    },
+    "lowestScore": {
+      "team": "Michael's Team",
+      "manager": "Michael Spiro",
+      "pts": 60,
+      "rank": 21
+    },
+    "medianScore": 100,
+    "biggestRiser": {
+      "team": "JimSmiley Loves LUFC",
+      "places": 14,
+      "rank": 1,
+      "total": 175,
+      "gwPts": 128
+    },
+    "biggestFaller": {
+      "team": "McCarren Park FC",
+      "places": -11,
+      "rank": 14,
+      "total": 140,
+      "gwPts": 87
+    },
+    "mostCaptained": {
+      "name": "B.Fernandes",
+      "pos": "MID",
+      "team": "Man Utd",
+      "color": "#DA291C",
+      "count": 12,
+      "total": 21,
+      "pts": 23
+    },
+    "topPlayer": {
+      "name": "B.Fernandes",
+      "pos": "MID",
+      "team": "Man Utd",
+      "color": "#DA291C",
+      "pts": 23,
+      "count": 16,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 18,
+        "total": 21,
+        "gwPts": 9,
+        "seasonPts": 20
+      },
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 16,
+        "total": 21,
+        "gwPts": 23,
+        "seasonPts": 25
+      },
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 16,
+        "total": 21,
+        "gwPts": 13,
+        "seasonPts": 15
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "bboost",
+        "label": "Bench Boost",
+        "count": 2,
+        "teams": [
+          "JimSmiley Loves LUFC",
+          "The Spice Boys"
+        ]
+      }
+    ],
+    "totalTransfers": 9,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "Ctrl Alt Deligt",
+        "manager": "John Bonten",
+        "total": 175,
+        "gwPts": 127,
+        "move": 11
+      },
+      {
+        "rank": 1,
+        "team": "JimSmiley Loves LUFC",
+        "manager": "Greg Bettinelli",
+        "total": 175,
+        "gwPts": 128,
+        "move": 14
+      },
+      {
+        "rank": 1,
+        "team": "The Spice Boys",
+        "manager": "Tony Lashley",
+        "total": 175,
+        "gwPts": 127,
+        "move": 11
+      },
+      {
+        "rank": 4,
+        "team": "Ming Dynasty",
+        "manager": "Ming Alterman",
+        "total": 171,
+        "gwPts": 109,
+        "move": -3
+      },
+      {
+        "rank": 5,
+        "team": "Bruno D'Or",
+        "manager": "Nihar Bobba",
+        "total": 167,
+        "gwPts": 118,
+        "move": 6
+      },
+      {
+        "rank": 6,
+        "team": "Bean and Bun",
+        "manager": "Jacob Stern",
+        "total": 165,
+        "gwPts": 107,
+        "move": -4
+      },
+      {
+        "rank": 6,
+        "team": "Chelsea United",
+        "manager": "Dmitry Gritskevich",
+        "total": 165,
+        "gwPts": 110,
+        "move": -1
+      },
+      {
+        "rank": 8,
+        "team": "You're My Wonderwall",
+        "manager": "Nikhil Basu Trivedi",
+        "total": 164,
+        "gwPts": 107,
+        "move": -5
+      },
+      {
+        "rank": 9,
+        "team": "True Baleba FC",
+        "manager": "Benjy Boateng",
+        "total": 156,
+        "gwPts": 104,
+        "move": -2
+      },
+      {
+        "rank": 10,
+        "team": "Kroos Control",
+        "manager": "Ali Altaf",
+        "total": 147,
+        "gwPts": 97,
+        "move": -1
+      },
+      {
+        "rank": 10,
+        "team": "Soccer Time",
+        "manager": "Sam Silverman",
+        "total": 147,
+        "gwPts": 93,
+        "move": -4
+      },
+      {
+        "rank": 12,
+        "team": "Mamoon's Team",
+        "manager": "Mamoon Hamid",
+        "total": 146,
+        "gwPts": 103,
+        "move": 5
+      },
+      {
+        "rank": 13,
+        "team": "Bushwick Gunners",
+        "manager": "Juan David Anez Pineda",
+        "total": 145,
+        "gwPts": 94,
+        "move": -5
+      },
+      {
+        "rank": 14,
+        "team": "McCarren Park FC",
+        "manager": "Zach Silverman",
+        "total": 140,
+        "gwPts": 87,
+        "move": -11
+      },
+      {
+        "rank": 15,
+        "team": "Macrinus",
+        "manager": "Lyle Adams",
+        "total": 138,
+        "gwPts": 100,
+        "move": 5
+      },
+      {
+        "rank": 15,
+        "team": "Odegardian of Galaxy",
+        "manager": "manji pal",
+        "total": 138,
+        "gwPts": 94,
+        "move": -3
+      },
+      {
+        "rank": 17,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 134,
+        "gwPts": 100,
+        "move": 4
+      },
+      {
+        "rank": 18,
+        "team": "Salibaba & Mama",
+        "manager": "Mazen Alawar",
+        "total": 132,
+        "gwPts": 87,
+        "move": -2
+      },
+      {
+        "rank": 19,
+        "team": "Keith's Team",
+        "manager": "Keith Ryu",
+        "total": 115,
+        "gwPts": 65,
+        "move": -10
+      },
+      {
+        "rank": 19,
+        "team": "Thierry Enrique",
+        "manager": "Diego Auvert",
+        "total": 115,
+        "gwPts": 74,
+        "move": -1
+      },
+      {
+        "rank": 21,
+        "team": "Michael's Team",
+        "manager": "Michael Spiro",
+        "total": 101,
+        "gwPts": 60,
+        "move": -3
+      }
+    ]
+  },
+  "3": {
+    "gw": 3,
+    "managers": 21,
+    "leader": {
+      "team": "The Spice Boys",
+      "manager": "Tony Lashley",
+      "total": 231,
+      "gwPts": 56
+    },
+    "leadChanged": true,
+    "previousLeader": {
+      "team": "Ctrl Alt Deligt",
+      "total": 175,
+      "rank": 4
+    },
+    "leadMargin": 7,
+    "highestScore": {
+      "team": "Mamoon's Team",
+      "manager": "Mamoon Hamid",
+      "pts": 62,
+      "rank": 8
+    },
+    "lowestScore": {
+      "team": "Show Me The Mane",
+      "manager": "Damir Becirovic",
+      "pts": 36,
+      "rank": 20
+    },
+    "medianScore": 50,
+    "biggestRiser": {
+      "team": "Mamoon's Team",
+      "places": 4,
+      "rank": 8,
+      "total": 208,
+      "gwPts": 62
+    },
+    "biggestFaller": {
+      "team": "Soccer Time",
+      "places": -4,
+      "rank": 14,
+      "total": 188,
+      "gwPts": 41
+    },
+    "mostCaptained": {
+      "name": "Haaland",
+      "pos": "FWD",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "count": 17,
+      "total": 21,
+      "pts": 9
+    },
+    "topPlayer": {
+      "name": "Mitchell",
+      "pos": "DEF",
+      "team": "Crystal Palace",
+      "color": "#1B458F",
+      "pts": 15,
+      "count": 1,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 17,
+        "total": 21,
+        "gwPts": 9,
+        "seasonPts": 24
+      },
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 17,
+        "total": 21,
+        "gwPts": 1,
+        "seasonPts": 21
+      },
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 15,
+        "total": 21,
+        "gwPts": 2,
+        "seasonPts": 27
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "3xc",
+        "label": "Triple Captain",
+        "count": 6,
+        "teams": [
+          "Mamoon's Team",
+          "The Spice Boys",
+          "Bean and Bun",
+          "Kroos Control",
+          "McCarren Park FC",
+          "JimSmiley Loves LUFC"
+        ]
+      },
+      {
+        "chip": "wildcard",
+        "label": "Wildcard",
+        "count": 2,
+        "teams": [
+          "Ctrl Alt Deligt",
+          "Ming Dynasty"
+        ]
+      },
+      {
+        "chip": "freehit",
+        "label": "Free Hit",
+        "count": 1,
+        "teams": [
+          "Keith's Team"
+        ]
+      }
+    ],
+    "totalTransfers": 58,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "The Spice Boys",
+        "manager": "Tony Lashley",
+        "total": 231,
+        "gwPts": 56,
+        "move": 0
+      },
+      {
+        "rank": 2,
+        "team": "JimSmiley Loves LUFC",
+        "manager": "Greg Bettinelli",
+        "total": 224,
+        "gwPts": 49,
+        "move": -1
+      },
+      {
+        "rank": 3,
+        "team": "Chelsea United",
+        "manager": "Dmitry Gritskevich",
+        "total": 223,
+        "gwPts": 58,
+        "move": 3
+      },
+      {
+        "rank": 4,
+        "team": "Ctrl Alt Deligt",
+        "manager": "John Bonten",
+        "total": 222,
+        "gwPts": 47,
+        "move": -3
+      },
+      {
+        "rank": 5,
+        "team": "Bean and Bun",
+        "manager": "Jacob Stern",
+        "total": 221,
+        "gwPts": 56,
+        "move": 1
+      },
+      {
+        "rank": 6,
+        "team": "Bruno D'Or",
+        "manager": "Nihar Bobba",
+        "total": 218,
+        "gwPts": 51,
+        "move": -1
+      },
+      {
+        "rank": 7,
+        "team": "Ming Dynasty",
+        "manager": "Ming Alterman",
+        "total": 215,
+        "gwPts": 44,
+        "move": -3
+      },
+      {
+        "rank": 8,
+        "team": "Mamoon's Team",
+        "manager": "Mamoon Hamid",
+        "total": 208,
+        "gwPts": 62,
+        "move": 4
+      },
+      {
+        "rank": 9,
+        "team": "True Baleba FC",
+        "manager": "Benjy Boateng",
+        "total": 206,
+        "gwPts": 50,
+        "move": 0
+      },
+      {
+        "rank": 10,
+        "team": "You're My Wonderwall",
+        "manager": "Nikhil Basu Trivedi",
+        "total": 204,
+        "gwPts": 40,
+        "move": -2
+      },
+      {
+        "rank": 11,
+        "team": "Kroos Control",
+        "manager": "Ali Altaf",
+        "total": 202,
+        "gwPts": 55,
+        "move": -1
+      },
+      {
+        "rank": 12,
+        "team": "Macrinus",
+        "manager": "Lyle Adams",
+        "total": 198,
+        "gwPts": 60,
+        "move": 3
+      },
+      {
+        "rank": 13,
+        "team": "McCarren Park FC",
+        "manager": "Zach Silverman",
+        "total": 190,
+        "gwPts": 50,
+        "move": 1
+      },
+      {
+        "rank": 14,
+        "team": "Bushwick Gunners",
+        "manager": "Juan David Anez Pineda",
+        "total": 188,
+        "gwPts": 43,
+        "move": -1
+      },
+      {
+        "rank": 14,
+        "team": "Soccer Time",
+        "manager": "Sam Silverman",
+        "total": 188,
+        "gwPts": 41,
+        "move": -4
+      },
+      {
+        "rank": 16,
+        "team": "Keith's Team",
+        "manager": "Keith Ryu",
+        "total": 175,
+        "gwPts": 60,
+        "move": 4
+      },
+      {
+        "rank": 17,
+        "team": "Odegardian of Galaxy",
+        "manager": "manji pal",
+        "total": 175,
+        "gwPts": 37,
+        "move": -1
+      },
+      {
+        "rank": 18,
+        "team": "Thierry Enrique",
+        "manager": "Diego Auvert",
+        "total": 173,
+        "gwPts": 58,
+        "move": 1
+      },
+      {
+        "rank": 19,
+        "team": "Salibaba & Mama",
+        "manager": "Mazen Alawar",
+        "total": 171,
+        "gwPts": 39,
+        "move": -1
+      },
+      {
+        "rank": 20,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 170,
+        "gwPts": 36,
+        "move": -3
+      },
+      {
+        "rank": 21,
+        "team": "Michael's Team",
+        "manager": "Michael Spiro",
+        "total": 155,
+        "gwPts": 54,
+        "move": 0
+      }
+    ]
+  }
+}

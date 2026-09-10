@@ -767,19 +767,19 @@
       },
       {
         "rank": 14,
-        "team": "Bushwick Gunners",
-        "manager": "Juan David Anez Pineda",
-        "total": 188,
-        "gwPts": 43,
-        "move": -1
-      },
-      {
-        "rank": 14,
         "team": "Soccer Time",
         "manager": "Sam Silverman",
         "total": 188,
         "gwPts": 41,
         "move": -4
+      },
+      {
+        "rank": 14,
+        "team": "Bushwick Gunners",
+        "manager": "Juan David Anez Pineda",
+        "total": 188,
+        "gwPts": 43,
+        "move": -1
       },
       {
         "rank": 16,

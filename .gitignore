@@ -1,0 +1,8 @@
+# Transient build artifacts. Every run rebuilds the whole season from the API,
+# so neither of these carries state that matters between machines.
+build.log
+
+# An optional input, not a source: --previous takes a data.json lifted from the
+# live artifact so earlier recap prose carries forward. The durable home for
+# recap text is recaps/gwN.json, which IS tracked.
+out/previous.json

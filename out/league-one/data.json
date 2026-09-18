@@ -1,0 +1,992 @@
+{
+  "leagueName": "FPL - League One",
+  "leagueId": 1166936,
+  "updated": "2026-09-18",
+  "throughGW": 4,
+  "managerCount": 13,
+  "paidPlaces": 5,
+  "payoutFinal": false,
+  "contactEmail": "lyle@kapjam.com",
+  "pot": {
+    "totalPot": "$3,900",
+    "buyInCaption": "$300 buy-in × 13",
+    "participants": 13,
+    "splitCaption": "50% / 20% / 15% / 10% / 5%"
+  },
+  "payouts": [
+    {
+      "place": "1st",
+      "name": "Lewis Malkin",
+      "team": "Tzolis & Gromit",
+      "pts": 314,
+      "payout": "$1,950"
+    },
+    {
+      "place": "2nd",
+      "name": "Arun Basuljevic",
+      "team": "Inveniam Sport",
+      "pts": 296,
+      "payout": "$780"
+    },
+    {
+      "place": "3rd",
+      "name": "Arinjay Singhai",
+      "team": "David Ornstein",
+      "pts": 293,
+      "payout": "$585"
+    },
+    {
+      "place": "4th",
+      "name": "Mike Shapiro",
+      "team": "Mike's Team",
+      "pts": 289,
+      "payout": "$390"
+    },
+    {
+      "place": "5th",
+      "name": "Shreman Shrestha",
+      "team": "Budapest",
+      "pts": 273,
+      "payout": "$195"
+    }
+  ],
+  "payoutFootnote": "Standings through Gameweek 4. Places and payouts move every week and are not final until the season ends.",
+  "gameweeks": {
+    "1": {
+      "standings": [
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 81,
+          "lastGW": 81,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 1,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 70,
+          "lastGW": 70,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 2,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 58,
+          "lastGW": 58,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 3,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 56,
+          "lastGW": 56,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 4,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 53,
+          "lastGW": 53,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 53,
+          "lastGW": 53,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 49,
+          "lastGW": 49,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 7,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 46,
+          "lastGW": 46,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 8,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 44,
+          "lastGW": 44,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 9,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 39,
+          "lastGW": 39,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 10,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 39,
+          "lastGW": 39,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 10,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 34,
+          "lastGW": 34,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 12,
+          "move": null,
+          "commissioner": true
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 28,
+          "lastGW": 28,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 13,
+          "move": null,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "unbound opened the season on top with 81 points, the highest score of Gameweek 1 and 11 clear of Tzolis & Gromit on 70.",
+        "DCTeam sat 3rd on 58 and Budapest 4th on 56 as the early chasing pack.",
+        "AC Momento had the week's lowest score with 28 points, against a league median of 49.",
+        "Haaland of Man City was the most captained pick, worn by 8 of 13 managers, and returned only 2 points.",
+        "The highest scoring player owned in this league was De Cuyper of Brighton with 17 points, held by just 1 of 13 managers.",
+        "No chips were played in the opening week."
+      ],
+      "mostCaptained": {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 8,
+        "total": 13,
+        "pts": 2
+      },
+      "topPlayer": {
+        "name": "De Cuyper",
+        "pos": "DEF",
+        "team": "Brighton",
+        "color": "#0057B8",
+        "pts": 17,
+        "count": 1,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 10,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 2
+        },
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 8,
+          "total": 13,
+          "gwPts": 11,
+          "seasonPts": 11
+        },
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 8,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 2
+        }
+      ]
+    },
+    "2": {
+      "standings": [
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 163,
+          "lastGW": 114,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 1,
+          "move": 6,
+          "commissioner": false
+        },
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 161,
+          "lastGW": 91,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 2,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 158,
+          "lastGW": 112,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 3,
+          "move": 5,
+          "commissioner": false
+        },
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 158,
+          "lastGW": 77,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 3,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 155,
+          "lastGW": 102,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 147,
+          "lastGW": 89,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 6,
+          "move": -3,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 135,
+          "lastGW": 82,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 7,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 134,
+          "lastGW": 78,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 8,
+          "move": -4,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 134,
+          "lastGW": 100,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 8,
+          "move": 4,
+          "commissioner": true
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 123,
+          "lastGW": 79,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 10,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 112,
+          "lastGW": 73,
+          "transfers": 14,
+          "hits": 0,
+          "rank": 11,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 107,
+          "lastGW": 79,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 12,
+          "move": 1,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 106,
+          "lastGW": 71,
+          "transfers": 2,
+          "hits": 4,
+          "rank": 13,
+          "move": -3,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "Mike's Team took over at the top, scoring a week-high 114 to climb 6 places to 1st on 163 points, 2 ahead of Tzolis & Gromit.",
+        "David Ornstein scored 112 and jumped 5 places into a tie for 3rd with unbound on 158. unbound, last week's leader, slipped 2 places.",
+        "Kvara-Demi had the week's lowest score with 71 points, against a league median of 82.",
+        "Budapest was the biggest faller, down 4 places to 8th on 134 despite scoring 78.",
+        "Haaland of Man City was the most captained pick again, worn by 6 of 13 managers, and returned 13 points.",
+        "The highest scoring player owned in this league was B.Fernandes of Man Utd with 23 points, held by 9 of 13 managers.",
+        "Bishop Sycamore HS played the Wildcard, and 21 transfers were made across the league."
+      ],
+      "mostCaptained": {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 6,
+        "total": 13,
+        "pts": 13
+      },
+      "topPlayer": {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "pts": 23,
+        "count": 9,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 10,
+          "total": 13,
+          "gwPts": 9,
+          "seasonPts": 20
+        },
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 9,
+          "total": 13,
+          "gwPts": 23,
+          "seasonPts": 25
+        },
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 8,
+          "total": 13,
+          "gwPts": 13,
+          "seasonPts": 15
+        }
+      ]
+    },
+    "3": {
+      "standings": [
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 215,
+          "lastGW": 60,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 1,
+          "move": 4,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 211,
+          "lastGW": 53,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 2,
+          "move": 1,
+          "commissioner": false
+        },
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 211,
+          "lastGW": 48,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 2,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 209,
+          "lastGW": 55,
+          "transfers": 3,
+          "hits": 4,
+          "rank": 4,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 207,
+          "lastGW": 73,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": 3,
+          "commissioner": false
+        },
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 206,
+          "lastGW": 45,
+          "transfers": 22,
+          "hits": 0,
+          "rank": 6,
+          "move": -4,
+          "commissioner": false
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 185,
+          "lastGW": 38,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 7,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 185,
+          "lastGW": 62,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 7,
+          "move": 3,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 175,
+          "lastGW": 40,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 9,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 170,
+          "lastGW": 36,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 10,
+          "move": -2,
+          "commissioner": true
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 160,
+          "lastGW": 53,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 11,
+          "move": 1,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 155,
+          "lastGW": 47,
+          "transfers": 16,
+          "hits": 4,
+          "rank": 12,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 151,
+          "lastGW": 45,
+          "transfers": 14,
+          "hits": 4,
+          "rank": 13,
+          "move": 0,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "Inveniam Sport became the third leader in three weeks, scoring 60 on a Triple Captain to climb 4 places to 1st on 215 points.",
+        "The lead is 4 points over David Ornstein and Mike's Team, who are tied for 2nd on 211, with unbound 4th on 209.",
+        "Budapest had the week's highest score with 73 points in a low scoring week where the league median was 48.",
+        "Show Me The Mane had the week's lowest score with 36 points and sat 10th.",
+        "Tzolis & Gromit was the biggest faller, down 4 places to 6th on 206 after scoring 45 on a Wildcard.",
+        "Haaland of Man City was the most captained pick, worn by 10 of 13 managers, and returned 9 points.",
+        "The highest scoring player owned in this league was Mitchell of Crystal Palace with 15 points, held by just 1 of 13 managers.",
+        "carrick's carnage and Inveniam Sport played Triple Captain, Tzolis & Gromit and Kvara-Demi played Wildcard, and 47 transfers were made across the league."
+      ],
+      "mostCaptained": {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 10,
+        "total": 13,
+        "pts": 9
+      },
+      "topPlayer": {
+        "name": "Mitchell",
+        "pos": "DEF",
+        "team": "Crystal Palace",
+        "color": "#1B458F",
+        "pts": 15,
+        "count": 1,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 11,
+          "total": 13,
+          "gwPts": 1,
+          "seasonPts": 21
+        },
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 10,
+          "total": 13,
+          "gwPts": 9,
+          "seasonPts": 24
+        },
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 9,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 27
+        }
+      ]
+    },
+    "4": {
+      "standings": [
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 314,
+          "lastGW": 108,
+          "transfers": 22,
+          "hits": 0,
+          "rank": 1,
+          "move": 5,
+          "commissioner": false
+        },
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 296,
+          "lastGW": 81,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 2,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 293,
+          "lastGW": 82,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 3,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 289,
+          "lastGW": 78,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 4,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 273,
+          "lastGW": 66,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 268,
+          "lastGW": 98,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 6,
+          "move": 4,
+          "commissioner": true
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 265,
+          "lastGW": 80,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 7,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 256,
+          "lastGW": 47,
+          "transfers": 4,
+          "hits": 4,
+          "rank": 8,
+          "move": -4,
+          "commissioner": false
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 253,
+          "lastGW": 68,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 9,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 224,
+          "lastGW": 69,
+          "transfers": 16,
+          "hits": 4,
+          "rank": 10,
+          "move": 2,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 218,
+          "lastGW": 51,
+          "transfers": 5,
+          "hits": 8,
+          "rank": 11,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 217,
+          "lastGW": 57,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 12,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 197,
+          "lastGW": 50,
+          "transfers": 16,
+          "hits": 8,
+          "rank": 13,
+          "move": 0,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "Tzolis & Gromit is the fourth different leader in four weeks, scoring a week-high 108 to jump 5 places to 1st on 314 points.",
+        "The lead is 18 points over Inveniam Sport on 296, with David Ornstein 3rd on 293 and Mike's Team 4th on 289.",
+        "unbound had the week's lowest score with 47 points, against a league median of 69, and was the biggest faller, down 4 places to 8th on 256.",
+        "Show Me The Mane scored 98 on a Triple Captain and climbed 4 places to 6th on 268.",
+        "João Pedro of Chelsea was the most captained pick, worn by 5 of 13 managers, and returned 12 points.",
+        "The highest scoring player owned in this league was Groß of Brighton with 17 points, held by 3 of 13 managers.",
+        "Show Me The Mane played the only chip of the week, and 11 transfers were made across the league."
+      ],
+      "mostCaptained": {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 5,
+        "total": 13,
+        "pts": 12
+      },
+      "topPlayer": {
+        "name": "Groß",
+        "pos": "MID",
+        "team": "Brighton",
+        "color": "#0057B8",
+        "pts": 17,
+        "count": 3,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 10,
+          "total": 13,
+          "gwPts": 9,
+          "seasonPts": 33
+        },
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 9,
+          "total": 13,
+          "gwPts": 12,
+          "seasonPts": 33
+        },
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 9,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 29
+        }
+      ]
+    }
+  },
+  "chips": [
+    {
+      "manager": "Varadh Jain",
+      "team": "carrick's carnage",
+      "entry": 1451644,
+      "chip": "3xc",
+      "gw": 3,
+      "pts": 62
+    },
+    {
+      "manager": "Arun Basuljevic",
+      "team": "Inveniam Sport",
+      "entry": 8591449,
+      "chip": "3xc",
+      "gw": 3,
+      "pts": 60
+    },
+    {
+      "manager": "Damir Becirovic",
+      "team": "Show Me The Mane",
+      "entry": 5081378,
+      "chip": "3xc",
+      "gw": 4,
+      "pts": 98
+    },
+    {
+      "manager": "James Oyedele",
+      "team": "Bishop Sycamore HS",
+      "entry": 5446464,
+      "chip": "wildcard",
+      "gw": 2,
+      "pts": 73
+    },
+    {
+      "manager": "Lewis Malkin",
+      "team": "Tzolis & Gromit",
+      "entry": 4984818,
+      "chip": "wildcard",
+      "gw": 3,
+      "pts": 45
+    },
+    {
+      "manager": "Demi O",
+      "team": "Kvara-Demi",
+      "entry": 6295460,
+      "chip": "wildcard",
+      "gw": 3,
+      "pts": 45
+    }
+  ],
+  "notes": [
+    "Only gameweeks that FPL has marked both finished and data checked appear here, so a week never shows up before its bonus points have landed.",
+    "The gameweek picker in the header rewinds the Standings, the Recap and the League Metrics to any completed week. Chips Played and the Payouts tab always show the latest state.",
+    "Ranks for the current gameweek come straight from FPL's own league table, including how it splits ties. Earlier weeks are ranked on total points.",
+    "The movement arrow next to each manager's name compares this week's rank to last week's. Gameweek 1 has no arrows because it was the first snapshot.",
+    "\"Transfers\" counts every move a manager has made through the selected gameweek, including the ones made on a Wildcard or Free Hit. FPL's own transfer counter leaves those out because they are free and unlimited.",
+    "\"Hits\" is the points a manager has given up to transfers, four per move beyond the free one. Wildcard and Free Hit moves never cost a hit.",
+    "The whole season is recomputed from the FPL API on every update, so nothing on this page can drift out of sync with the official league table.",
+    "Team names in the Recap, the Standings and Chips Played all link to that team's official FPL page for the relevant gameweek."
+  ]
+}

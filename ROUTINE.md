@@ -15,6 +15,16 @@ settle a day or two later and simply get picked up by the following run. The
 check is cheap and silent when nothing has changed, so a run that finds no
 new gameweek costs nothing.
 
+## Other leagues
+
+League One and Premier League run the same routine as separate scheduled
+tasks (`fpl-league-one-tracker`, `fpl-premier-league-tracker`), staggered
+after this one on the same morning because the FPL API times out on parallel
+requests. Their prompts are the one below with four substitutions: the
+artifact URL from `leagues/<name>.json`, `--config <name>` on every build
+command, `out/<name>/` for `previous.json`, `data.json`, `facts.json` and
+`tracker.html`, and `recaps/<name>/gw<N>.json` for the new recap.
+
 ---
 
 ## The prompt

@@ -1,10 +1,27 @@
-# FPL - Championship Tracker
+# FPL League Trackers
 
 A published page tracking the Fantasy Premier League classic league
 **FPL - Championship** (league ID `1166922`): standings, weekly recaps,
 league-only metrics and payout projections.
 
 Live artifact: <https://claude.ai/code/artifact/18b62565-da55-4199-9262-73ebdde14b76>
+
+The same builder and template also publish the other two tiers run by the
+same commissioner. One config file per league lives in `leagues/`:
+
+| Config | League | ID | Artifact |
+| --- | --- | --- | --- |
+| `championship` (default) | FPL - Championship | `1166922` | <https://claude.ai/code/artifact/18b62565-da55-4199-9262-73ebdde14b76> |
+| `league-one` | FPL - League One | `1166936` | <https://claude.ai/artifact/KYVxxgQsWo9cCufy7S5stC> |
+| `premier-league` | FPL - Premier League | `1166898` | <https://claude.ai/artifact/Ttr7gnZDuuy3V7eC2bxVoG> |
+
+```bash
+python3 build_tracker.py --config league-one      # writes out/league-one/, reads recaps/league-one/
+```
+
+Championship keeps its original `out/` and `recaps/` paths, so running with no
+flags behaves exactly as it always has. The public FPL API serves any classic
+league without a login, so none of these needs a league membership.
 
 ## Run it
 
@@ -28,12 +45,13 @@ Outputs land in `out/`:
 
 | Flag | Default | Purpose |
 | --- | --- | --- |
+| `--config` | `championship` | a name in `leagues/` or a path to a league JSON file |
 | `--template` | `template.html` | page shell with the `__TRACKER_DATA__` placeholder |
-| `--outdir` | `out` | where the three output files go |
+| `--outdir` | the config's `outdir` | where the three output files go |
 | `--previous` | none | a `data.json` extracted from the live artifact, so past recap prose carries forward |
 | `--recap` | none | override one week's bullets: `{"gw":N,"bullets":[...]}` |
-| `--recap-dir` | `recaps` | directory of hand-written `gwN.json` files |
-| `--league` | `1166922` | any classic league ID |
+| `--recap-dir` | the config's `recap_dir` | directory of hand-written `gwN.json` files |
+| `--league` | the config's `league_id` | override the league ID; money rules still come from the config |
 
 Typical weekly run, keeping the wording already on the live page:
 
@@ -63,14 +81,16 @@ Endpoints used: `bootstrap-static/`, `leagues-classic/<id>/standings/`
 
 ### `build_tracker.py`
 
-League config lives in constants at the top of the file:
+League config lives in `leagues/<name>.json`, loaded by `--config`:
 
 ```
-LEAGUE_ID    = 1166922
-BUY_IN       = 300
-PAYOUT_PCTS  = {1: .50, 2: .20, 3: .15, 4: .10, 5: .05}
-CONTACT_EMAIL, COMMISSIONER_NAME, COMMISSIONER_TEAM
+league_id, page_title, buy_in, payout_pcts, contact_email,
+commissioner_name, commissioner_team, outdir, recap_dir, artifact_url
 ```
+
+`payout_pcts` must sum to 100% or the build fails. `page_title` fills the
+`__PAGE_TITLE__` placeholder in the template. To add a league, copy one of the
+files, change the values, and build with `--config <name>`.
 
 The pot is computed live: `BUY_IN × managers in the league`. Nothing about
 the field size or the dollar amounts is hardcoded, so a manager joining or
@@ -136,8 +156,8 @@ every number from `facts.json` rather than estimating it.
 
 ### `template.html`
 
-One self-contained page. `const DEFAULT_DATA = __TRACKER_DATA__;` is the only
-thing the build substitutes. Premier League purple (`#37003C` / `#240029`)
+One self-contained page. `const DEFAULT_DATA = __TRACKER_DATA__;` and the
+`__PAGE_TITLE__` title are the only things the build substitutes. Premier League purple (`#37003C` / `#240029`)
 and green (`#00FF87`), matching the Rosner's Relegation Battle tracker so
 both leagues read as the same product.
 

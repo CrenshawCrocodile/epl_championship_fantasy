@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Rebuild the FPL - Championship tracker page from the live FPL API.
+"""Rebuild an FPL league tracker page from the live FPL API.
 
 Every run recomputes the whole season from scratch. There is no local state
 file, so nothing can drift: if the API says it, the page says it, and if the
 API and the page disagree the build fails instead of publishing.
 
-  python3 build_tracker.py                       # rebuild into ./out
+  python3 build_tracker.py                       # Championship, into ./out
+  python3 build_tracker.py --config league-one   # any league in leagues/*.json
   python3 build_tracker.py --previous out/previous.json   # keep old recap prose
   python3 build_tracker.py --recap '{"gw":4,"bullets":["..."]}'
 
@@ -27,15 +28,22 @@ from fetch_fpl import FPLClient, FPLError, finalized_gameweeks
 # League-specific config
 # ---------------------------------------------------------------------------
 
-LEAGUE_ID = 1166922
-BUY_IN = 300
-PAYOUT_PCTS = {1: 0.50, 2: 0.20, 3: 0.15, 4: 0.10, 5: 0.05}
-CONTACT_EMAIL = "adamslj5@gmail.com"
+# One JSON file per league in leagues/. These module-level names are filled in
+# by load_config() before anything else runs; the values here are only the
+# shape, not a default league.
+DEFAULT_CONFIG = "championship"
+CONFIG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "leagues")
+
+LEAGUE_ID = None
+PAGE_TITLE = None
+BUY_IN = None
+PAYOUT_PCTS = None
+CONTACT_EMAIL = None
 
 # The commissioner's standings row gets badged on the page. Matched on entry
 # name so a manager renaming their team does not silently drop the badge.
-COMMISSIONER_NAME = "Damir Becirovic"
-COMMISSIONER_TEAM = "Show me the Mane"
+COMMISSIONER_NAME = None
+COMMISSIONER_TEAM = None
 
 SEASON_LAST_GW = 38
 TOP_OWNED_SHOWN = 3
@@ -64,10 +72,38 @@ CHIP_LABELS = {
 PLACE_WORDS = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "5th"}
 
 TEMPLATE_PLACEHOLDER = "__TRACKER_DATA__"
+TITLE_PLACEHOLDER = "__PAGE_TITLE__"
 
 
 class BuildError(RuntimeError):
     """A sanity check failed. The build stops; nothing gets published."""
+
+
+def load_config(name):
+    """Read leagues/<name>.json (or an explicit path) into the module config.
+
+    Returns the raw dict so main() can pick up outdir and recap_dir."""
+    global LEAGUE_ID, PAGE_TITLE, BUY_IN, PAYOUT_PCTS, CONTACT_EMAIL
+    global COMMISSIONER_NAME, COMMISSIONER_TEAM
+    path = name if os.path.isfile(name) else os.path.join(CONFIG_DIR, name + ".json")
+    if not os.path.isfile(path):
+        raise BuildError("no league config at %s" % path)
+    with open(path) as fh:
+        cfg = json.load(fh)
+    try:
+        LEAGUE_ID = int(cfg["league_id"])
+        PAGE_TITLE = cfg["page_title"]
+        BUY_IN = cfg["buy_in"]
+        # JSON keys are strings; places are ints everywhere else.
+        PAYOUT_PCTS = {int(k): v for k, v in cfg["payout_pcts"].items()}
+        CONTACT_EMAIL = cfg["contact_email"]
+        COMMISSIONER_NAME = cfg["commissioner_name"]
+        COMMISSIONER_TEAM = cfg["commissioner_team"]
+    except KeyError as exc:
+        raise BuildError("league config %s is missing %s" % (path, exc))
+    if abs(sum(PAYOUT_PCTS.values()) - 1.0) > 1e-9:
+        raise BuildError("payout_pcts in %s do not sum to 100%%" % path)
+    return cfg
 
 
 def money(amount):
@@ -692,7 +728,9 @@ def render(template_path, payload):
     blob = json.dumps(payload, indent=2, ensure_ascii=False)
     # A team name containing "</script>" would otherwise close the tag early.
     blob = blob.replace("</", "<\\/")
-    return template.replace(TEMPLATE_PLACEHOLDER, blob)
+    title = (PAGE_TITLE.replace("&", "&amp;").replace("<", "&lt;"))
+    return (template.replace(TITLE_PLACEHOLDER, title)
+                    .replace(TEMPLATE_PLACEHOLDER, blob))
 
 
 # ---------------------------------------------------------------------------
@@ -700,16 +738,25 @@ def render(template_path, payload):
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--config", default=DEFAULT_CONFIG,
+                    help="league config: a name in leagues/ or a path to a JSON file")
     ap.add_argument("--template", default="template.html")
-    ap.add_argument("--outdir", default="out")
+    ap.add_argument("--outdir", help="default: the config's outdir")
     ap.add_argument("--previous",
                     help="data.json extracted from the live artifact, so past "
                          "recap prose carries forward")
     ap.add_argument("--recap",
                     help='override this week\'s bullets: {"gw":N,"bullets":[...]}')
-    ap.add_argument("--recap-dir", default="recaps")
-    ap.add_argument("--league", type=int, default=LEAGUE_ID)
+    ap.add_argument("--recap-dir", help="default: the config's recap_dir")
+    ap.add_argument("--league", type=int,
+                    help="override the config's league ID (money rules still "
+                         "come from the config)")
     args = ap.parse_args()
+
+    cfg = load_config(args.config)
+    args.outdir = args.outdir or cfg.get("outdir", "out")
+    args.recap_dir = args.recap_dir or cfg.get("recap_dir", "recaps")
+    args.league = args.league or LEAGUE_ID
 
     previous = None
     if args.previous:

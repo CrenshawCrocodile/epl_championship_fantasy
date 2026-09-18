@@ -1,0 +1,18 @@
+{
+  "league_id": 1166898,
+  "page_title": "FPL Premier League Tracker",
+  "buy_in": 300,
+  "payout_pcts": {
+    "1": 0.5,
+    "2": 0.2,
+    "3": 0.15,
+    "4": 0.1,
+    "5": 0.05
+  },
+  "commissioner_name": "Damir Becirovic",
+  "commissioner_team": "Show me the Mane",
+  "contact_email": "lyle@kapjam.com",
+  "outdir": "out/premier-league",
+  "recap_dir": "recaps/premier-league",
+  "artifact_url": "https://claude.ai/artifact/Ttr7gnZDuuy3V7eC2bxVoG"
+}

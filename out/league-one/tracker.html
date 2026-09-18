@@ -1,0 +1,1452 @@
+<title>FPL League One Tracker</title>
+<style>
+  :root{
+    --purple:#37003C;
+    --purple-deep:#240029;
+    --green:#00FF87;
+    --pink:#E90052;
+    --up:#0E9F5C;
+    --down:#D6003D;
+    --paper:#F7F5F8;
+    --line:#E3DEE6;
+    --ink:#20101F;
+    --muted:#7A6E7F;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;padding:32px 20px 60px;}
+  .wrap{max-width:960px;margin:0 auto;}
+
+  header{background:linear-gradient(135deg,var(--purple) 0%,var(--purple-deep) 100%);border-radius:16px;padding:28px 32px;color:#fff;position:relative;overflow:hidden;margin-bottom:20px;}
+  header::after{content:"";position:absolute;right:-40px;top:-60px;width:220px;height:220px;background:radial-gradient(circle,var(--green) 0%,transparent 70%);opacity:.35;}
+  h1{margin:0;font-size:28px;letter-spacing:-0.01em;font-weight:800;}
+  .meta{margin-top:12px;display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:#E8DEEA;position:relative;}
+  .meta b{color:#fff;}
+
+  .gwpick{margin-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:relative;}
+  .gwpick label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:#E8DEEA;font-weight:700;}
+  .gwpick select{appearance:none;-webkit-appearance:none;background-color:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.38);border-radius:9px;padding:8px 34px 8px 13px;font-family:inherit;font-size:13px;font-weight:700;line-height:1.2;cursor:pointer;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;}
+  .gwpick select:hover{background-color:rgba(255,255,255,.22);}
+  .gwpick select:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
+  .gwpick option{color:var(--ink);background:#fff;}
+  .gwpick .hint{font-size:11.5px;color:#CBB9CF;font-style:italic;}
+  .pastflag{display:inline-block;background:#FFF1E7;color:#B85C00;font-weight:800;font-size:10.5px;padding:2px 8px;border-radius:999px;margin-left:8px;letter-spacing:.02em;text-transform:uppercase;vertical-align:middle;}
+
+  .tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+  .tab-btn{border:1px solid var(--line);background:#fff;color:var(--muted);font-weight:700;font-size:13px;padding:9px 18px;border-radius:10px;cursor:pointer;}
+  .tab-btn.active{background:var(--purple);color:#fff;border-color:var(--purple);}
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px 26px;margin-bottom:20px;}
+  .card h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--purple);margin:0 0 4px;}
+  .card .sub{font-size:12.5px;color:var(--muted);margin:0 0 16px;}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;padding:0 8px 8px;border-bottom:2px solid var(--purple);}
+  th.num,td.num{text-align:right;}
+  td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle;}
+  .rank{font-weight:800;color:var(--purple);width:24px;display:inline-block;}
+  .team{font-weight:700;font-size:14.5px;}
+  .name{color:var(--muted);font-size:12px;display:flex;align-items:center;gap:5px;}
+  .commish{font-size:10px;color:var(--muted);font-weight:600;}
+  .lead{display:inline-block;background:var(--green);color:var(--purple-deep);font-weight:800;font-size:10.5px;padding:2px 7px;border-radius:999px;margin-left:6px;letter-spacing:.02em;}
+  .paid{box-shadow:inset 3px 0 0 var(--green);}
+  .pts{font-weight:700;}
+  .arrow{font-weight:800;font-size:11px;}
+  .arrow.up{color:var(--up);}
+  .arrow.down{color:var(--down);}
+  .arrow.flat{color:var(--muted);}
+
+  .winners td{font-size:13.5px;}
+  .projected td, .projected th{color:var(--muted);font-style:italic;}
+  .projected td.money{color:var(--purple);font-style:normal;font-weight:800;}
+  .final td, .final th{font-style:normal;color:inherit;}
+
+  .potgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:4px;}
+  .potbox{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center;}
+  .potbox .n{font-size:20px;font-weight:800;color:var(--purple);}
+  .potbox .l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:2px;}
+  .potbox .s{font-size:11px;color:var(--muted);margin-top:4px;}
+
+  .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;}
+  .stat .l{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;}
+  .stat .v{font-size:16px;font-weight:800;color:var(--purple);margin-top:4px;display:flex;align-items:center;flex-wrap:wrap;gap:7px;}
+  .teampill{display:inline-block;color:#fff;font-weight:700;font-size:10.5px;padding:3px 9px;border-radius:999px;text-shadow:0 1px 1px rgba(0,0,0,.25);vertical-align:middle;}
+  .stat .d{font-size:12px;color:var(--muted);margin-top:2px;}
+
+  .ownedlist{list-style:none;margin:0 0 12px;padding:0;display:flex;flex-direction:column;gap:8px;}
+  .ownedlist li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13.5px;}
+  .ownedlist .toprow{display:flex;justify-content:space-between;align-items:center;}
+  .ownedlist .botrow{display:flex;justify-content:space-between;align-items:center;margin-top:7px;}
+  .ownedlist .pname{font-weight:700;}
+  .ownedlist .pct{font-weight:800;color:var(--purple);}
+  .ownedlist .ptsline{font-size:11.5px;color:var(--muted);}
+
+  .team a{color:inherit;text-decoration:none;border-bottom:1.5px solid var(--line);transition:border-color .12s;}
+  .team a:hover{border-bottom-color:var(--purple);}
+  .team a:focus-visible,ul.tldr a:focus-visible{outline:2px solid var(--purple);outline-offset:2px;border-radius:3px;}
+  ul.tldr a{color:var(--purple);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(55,0,60,.28);}
+  ul.tldr a:hover{border-bottom-color:var(--purple);}
+
+  .metrics-footnote{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:4px;}
+
+  ul.tldr{margin:0;padding-left:18px;font-size:13px;color:var(--ink);line-height:1.7;}
+  ul.tldr li{margin-bottom:6px;}
+
+  ul.notes{margin:0;padding-left:18px;font-size:12.5px;color:var(--muted);line-height:1.7;}
+  ul.notes li{margin-bottom:4px;}
+
+  .chip-btns{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+  .chip-btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:999px;cursor:pointer;}
+  .chip-btn.active{background:var(--purple);color:#fff;border-color:var(--purple);}
+
+  .siteFooter{font-size:12.5px;color:var(--muted);text-align:center;padding:10px 4px 0;}
+  .siteFooter a{color:var(--purple);font-weight:700;text-decoration:none;}
+
+  .tblwrap{overflow-x:visible;}
+
+  @media (max-width:480px){
+    body{padding:18px 12px 44px;}
+    header{padding:20px 18px;}
+    h1{font-size:23px;}
+    .card{padding:16px 15px 20px;}
+    .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px;}
+    .tab-btn{white-space:nowrap;flex:0 0 auto;padding:9px 14px;font-size:12.5px;}
+    .gwpick{margin-top:14px;}
+    .gwpick .hint{flex-basis:100%;}
+    .statgrid{grid-template-columns:1fr;}
+    .potgrid{grid-template-columns:1fr 1fr;}
+    .potgrid .potbox:first-child{grid-column:1 / -1;}
+
+    /* Turn data tables into stacked cards instead of letting them overflow */
+    .card-table{min-width:0;width:100%;}
+    .card-table thead{display:none;}
+    .card-table, .card-table tbody, .card-table tr, .card-table td{display:block;width:100%;}
+    .card-table tr{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:10px;background:#fff;}
+    .card-table td{border:none !important;padding:3px 0;text-align:left;}
+    .card-table td[data-label]::before{
+      content:attr(data-label);
+      display:block;
+      font-size:9.5px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .card-table td:first-child:not([data-label]){
+      font-size:14.5px;font-weight:700;color:var(--ink);
+      padding-bottom:8px;margin-bottom:6px;border-bottom:1px solid var(--line);
+    }
+    .standings-mobile td:nth-child(2){
+      padding-bottom:8px;margin-bottom:6px;border-bottom:1px solid var(--line);
+    }
+  }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <h1 id="pageTitle">FPL League One Tracker</h1>
+    <div class="meta" id="metaLine"><span>Loading…</span></div>
+    <div class="gwpick" id="gwPick"></div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-panel="insights">Insights and Overview</button>
+    <button class="tab-btn" data-panel="standings">Standings</button>
+    <button class="tab-btn" data-panel="payouts">Payouts</button>
+  </div>
+
+  <div class="panel active" id="panel-insights">
+    <div class="card">
+      <h2 id="gwSummaryTitle">Gameweek Recap</h2>
+      <p class="sub" id="gwSummarySub">TL;DR from this gameweek.</p>
+      <ul class="tldr" id="gwSummaryList"></ul>
+    </div>
+    <div class="card">
+      <h2 id="metricsTitle">League Metrics</h2>
+      <p class="sub" id="metricsSub">Captaincy, top scorer and ownership across the league.</p>
+      <div class="statgrid">
+        <div class="stat">
+          <div class="l">Most Captained</div>
+          <div class="v" id="statCaptain"></div>
+          <div class="d" id="statCaptainSub"></div>
+        </div>
+        <div class="stat">
+          <div class="l">Highest Scoring Player</div>
+          <div class="v" id="statTopPlayer"></div>
+          <div class="d" id="statTopPlayerSub"></div>
+        </div>
+      </div>
+      <div class="l" style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-bottom:8px;">Most Owned Players</div>
+      <ul class="ownedlist" id="ownedList"></ul>
+      <div class="metrics-footnote" id="metricsFootnote">These metrics are for our league only.</div>
+    </div>
+    <div class="card">
+      <h2>Chips Played</h2>
+      <p class="sub">Click a chip to see who's played it, in which gameweek, and their points haul that week.</p>
+      <div class="chip-btns" id="chipBtns"></div>
+      <div class="tblwrap"><table class="winners card-table">
+        <thead><tr><th>Team</th><th class="num">Gameweek</th><th class="num">Points Haul</th></tr></thead>
+        <tbody id="chipsBody"></tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h2>Notes</h2>
+      <ul class="notes" id="notesList"></ul>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-standings">
+    <div class="card">
+      <h2 id="standingsTitle">Overall Standing</h2>
+      <p class="sub">Total points, points from the selected gameweek, transfers made to date and points lost to transfer hits.</p>
+      <div class="tblwrap"><table class="card-table standings-mobile">
+        <thead>
+          <tr>
+            <th style="width:28px">#</th>
+            <th>Team</th>
+            <th class="num">Total</th>
+            <th class="num">GW Pts</th>
+            <th class="num">Transfers</th>
+            <th class="num">Hits</th>
+          </tr>
+        </thead>
+        <tbody id="standingsBody"></tbody>
+      </table></div>
+      <div class="metrics-footnote" id="standingsFootnote"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-payouts">
+    <div class="card">
+      <h2>Pot Overview</h2>
+      <div class="potgrid" id="potGrid"></div>
+    </div>
+    <div class="card">
+      <h2 id="payoutTitle">Projected Payout</h2>
+      <p class="sub" id="payoutSub">If the season ended today, based on current total points. Nothing here is final until the season ends.</p>
+      <div class="tblwrap"><table class="winners projected card-table" id="payoutTable">
+        <thead><tr><th>Place</th><th>Manager</th><th>Team</th><th class="num">Pts</th><th class="num">Payout</th></tr></thead>
+        <tbody id="payoutBody"></tbody>
+      </table></div>
+      <div class="metrics-footnote" id="payoutFootnote"></div>
+    </div>
+  </div>
+
+  <p class="siteFooter" id="siteFooter"></p>
+
+</div>
+
+<script>
+const CHIP_NAMES = {bboost:"Bench Boost", "3xc":"Triple Captain", freehit:"Free Hit", wildcard:"Wild Card", manager:"Assistant Manager"};
+
+const DEFAULT_DATA = {
+  "leagueName": "FPL - League One",
+  "leagueId": 1166936,
+  "updated": "2026-09-18",
+  "throughGW": 4,
+  "managerCount": 13,
+  "paidPlaces": 5,
+  "payoutFinal": false,
+  "contactEmail": "lyle@kapjam.com",
+  "pot": {
+    "totalPot": "$3,900",
+    "buyInCaption": "$300 buy-in × 13",
+    "participants": 13,
+    "splitCaption": "50% / 20% / 15% / 10% / 5%"
+  },
+  "payouts": [
+    {
+      "place": "1st",
+      "name": "Lewis Malkin",
+      "team": "Tzolis & Gromit",
+      "pts": 314,
+      "payout": "$1,950"
+    },
+    {
+      "place": "2nd",
+      "name": "Arun Basuljevic",
+      "team": "Inveniam Sport",
+      "pts": 296,
+      "payout": "$780"
+    },
+    {
+      "place": "3rd",
+      "name": "Arinjay Singhai",
+      "team": "David Ornstein",
+      "pts": 293,
+      "payout": "$585"
+    },
+    {
+      "place": "4th",
+      "name": "Mike Shapiro",
+      "team": "Mike's Team",
+      "pts": 289,
+      "payout": "$390"
+    },
+    {
+      "place": "5th",
+      "name": "Shreman Shrestha",
+      "team": "Budapest",
+      "pts": 273,
+      "payout": "$195"
+    }
+  ],
+  "payoutFootnote": "Standings through Gameweek 4. Places and payouts move every week and are not final until the season ends.",
+  "gameweeks": {
+    "1": {
+      "standings": [
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 81,
+          "lastGW": 81,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 1,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 70,
+          "lastGW": 70,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 2,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 58,
+          "lastGW": 58,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 3,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 56,
+          "lastGW": 56,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 4,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 53,
+          "lastGW": 53,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 53,
+          "lastGW": 53,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 49,
+          "lastGW": 49,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 7,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 46,
+          "lastGW": 46,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 8,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 44,
+          "lastGW": 44,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 9,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 39,
+          "lastGW": 39,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 10,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 39,
+          "lastGW": 39,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 10,
+          "move": null,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 34,
+          "lastGW": 34,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 12,
+          "move": null,
+          "commissioner": true
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 28,
+          "lastGW": 28,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 13,
+          "move": null,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "unbound opened the season on top with 81 points, the highest score of Gameweek 1 and 11 clear of Tzolis & Gromit on 70.",
+        "DCTeam sat 3rd on 58 and Budapest 4th on 56 as the early chasing pack.",
+        "AC Momento had the week's lowest score with 28 points, against a league median of 49.",
+        "Haaland of Man City was the most captained pick, worn by 8 of 13 managers, and returned only 2 points.",
+        "The highest scoring player owned in this league was De Cuyper of Brighton with 17 points, held by just 1 of 13 managers.",
+        "No chips were played in the opening week."
+      ],
+      "mostCaptained": {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 8,
+        "total": 13,
+        "pts": 2
+      },
+      "topPlayer": {
+        "name": "De Cuyper",
+        "pos": "DEF",
+        "team": "Brighton",
+        "color": "#0057B8",
+        "pts": 17,
+        "count": 1,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 10,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 2
+        },
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 8,
+          "total": 13,
+          "gwPts": 11,
+          "seasonPts": 11
+        },
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 8,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 2
+        }
+      ]
+    },
+    "2": {
+      "standings": [
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 163,
+          "lastGW": 114,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 1,
+          "move": 6,
+          "commissioner": false
+        },
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 161,
+          "lastGW": 91,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 2,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 158,
+          "lastGW": 112,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 3,
+          "move": 5,
+          "commissioner": false
+        },
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 158,
+          "lastGW": 77,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 3,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 155,
+          "lastGW": 102,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 147,
+          "lastGW": 89,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 6,
+          "move": -3,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 135,
+          "lastGW": 82,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 7,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 134,
+          "lastGW": 78,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 8,
+          "move": -4,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 134,
+          "lastGW": 100,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 8,
+          "move": 4,
+          "commissioner": true
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 123,
+          "lastGW": 79,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 10,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 112,
+          "lastGW": 73,
+          "transfers": 14,
+          "hits": 0,
+          "rank": 11,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 107,
+          "lastGW": 79,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 12,
+          "move": 1,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 106,
+          "lastGW": 71,
+          "transfers": 2,
+          "hits": 4,
+          "rank": 13,
+          "move": -3,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "Mike's Team took over at the top, scoring a week-high 114 to climb 6 places to 1st on 163 points, 2 ahead of Tzolis & Gromit.",
+        "David Ornstein scored 112 and jumped 5 places into a tie for 3rd with unbound on 158. unbound, last week's leader, slipped 2 places.",
+        "Kvara-Demi had the week's lowest score with 71 points, against a league median of 82.",
+        "Budapest was the biggest faller, down 4 places to 8th on 134 despite scoring 78.",
+        "Haaland of Man City was the most captained pick again, worn by 6 of 13 managers, and returned 13 points.",
+        "The highest scoring player owned in this league was B.Fernandes of Man Utd with 23 points, held by 9 of 13 managers.",
+        "Bishop Sycamore HS played the Wildcard, and 21 transfers were made across the league."
+      ],
+      "mostCaptained": {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 6,
+        "total": 13,
+        "pts": 13
+      },
+      "topPlayer": {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "pts": 23,
+        "count": 9,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 10,
+          "total": 13,
+          "gwPts": 9,
+          "seasonPts": 20
+        },
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 9,
+          "total": 13,
+          "gwPts": 23,
+          "seasonPts": 25
+        },
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 8,
+          "total": 13,
+          "gwPts": 13,
+          "seasonPts": 15
+        }
+      ]
+    },
+    "3": {
+      "standings": [
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 215,
+          "lastGW": 60,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 1,
+          "move": 4,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 211,
+          "lastGW": 53,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 2,
+          "move": 1,
+          "commissioner": false
+        },
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 211,
+          "lastGW": 48,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 2,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 209,
+          "lastGW": 55,
+          "transfers": 3,
+          "hits": 4,
+          "rank": 4,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 207,
+          "lastGW": 73,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": 3,
+          "commissioner": false
+        },
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 206,
+          "lastGW": 45,
+          "transfers": 22,
+          "hits": 0,
+          "rank": 6,
+          "move": -4,
+          "commissioner": false
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 185,
+          "lastGW": 38,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 7,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 185,
+          "lastGW": 62,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 7,
+          "move": 3,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 175,
+          "lastGW": 40,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 9,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 170,
+          "lastGW": 36,
+          "transfers": 1,
+          "hits": 0,
+          "rank": 10,
+          "move": -2,
+          "commissioner": true
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 160,
+          "lastGW": 53,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 11,
+          "move": 1,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 155,
+          "lastGW": 47,
+          "transfers": 16,
+          "hits": 4,
+          "rank": 12,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 151,
+          "lastGW": 45,
+          "transfers": 14,
+          "hits": 4,
+          "rank": 13,
+          "move": 0,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "Inveniam Sport became the third leader in three weeks, scoring 60 on a Triple Captain to climb 4 places to 1st on 215 points.",
+        "The lead is 4 points over David Ornstein and Mike's Team, who are tied for 2nd on 211, with unbound 4th on 209.",
+        "Budapest had the week's highest score with 73 points in a low scoring week where the league median was 48.",
+        "Show Me The Mane had the week's lowest score with 36 points and sat 10th.",
+        "Tzolis & Gromit was the biggest faller, down 4 places to 6th on 206 after scoring 45 on a Wildcard.",
+        "Haaland of Man City was the most captained pick, worn by 10 of 13 managers, and returned 9 points.",
+        "The highest scoring player owned in this league was Mitchell of Crystal Palace with 15 points, held by just 1 of 13 managers.",
+        "carrick's carnage and Inveniam Sport played Triple Captain, Tzolis & Gromit and Kvara-Demi played Wildcard, and 47 transfers were made across the league."
+      ],
+      "mostCaptained": {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 10,
+        "total": 13,
+        "pts": 9
+      },
+      "topPlayer": {
+        "name": "Mitchell",
+        "pos": "DEF",
+        "team": "Crystal Palace",
+        "color": "#1B458F",
+        "pts": 15,
+        "count": 1,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 11,
+          "total": 13,
+          "gwPts": 1,
+          "seasonPts": 21
+        },
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 10,
+          "total": 13,
+          "gwPts": 9,
+          "seasonPts": 24
+        },
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 9,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 27
+        }
+      ]
+    },
+    "4": {
+      "standings": [
+        {
+          "entry": 4984818,
+          "name": "Lewis Malkin",
+          "team": "Tzolis & Gromit",
+          "total": 314,
+          "lastGW": 108,
+          "transfers": 22,
+          "hits": 0,
+          "rank": 1,
+          "move": 5,
+          "commissioner": false
+        },
+        {
+          "entry": 8591449,
+          "name": "Arun Basuljevic",
+          "team": "Inveniam Sport",
+          "total": 296,
+          "lastGW": 81,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 2,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 7604516,
+          "name": "Arinjay Singhai",
+          "team": "David Ornstein",
+          "total": 293,
+          "lastGW": 82,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 3,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 6375544,
+          "name": "Mike Shapiro",
+          "team": "Mike's Team",
+          "total": 289,
+          "lastGW": 78,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 4,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5076089,
+          "name": "Shreman Shrestha",
+          "team": "Budapest",
+          "total": 273,
+          "lastGW": 66,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 5,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 5081378,
+          "name": "Damir Becirovic",
+          "team": "Show Me The Mane",
+          "total": 268,
+          "lastGW": 98,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 6,
+          "move": 4,
+          "commissioner": true
+        },
+        {
+          "entry": 1901356,
+          "name": "Dawid Cedrych",
+          "team": "DCTeam",
+          "total": 265,
+          "lastGW": 80,
+          "transfers": 2,
+          "hits": 0,
+          "rank": 7,
+          "move": 0,
+          "commissioner": false
+        },
+        {
+          "entry": 3369617,
+          "name": "Shravin Mittal",
+          "team": "unbound",
+          "total": 256,
+          "lastGW": 47,
+          "transfers": 4,
+          "hits": 4,
+          "rank": 8,
+          "move": -4,
+          "commissioner": false
+        },
+        {
+          "entry": 1451644,
+          "name": "Varadh Jain",
+          "team": "carrick's carnage",
+          "total": 253,
+          "lastGW": 68,
+          "transfers": 3,
+          "hits": 0,
+          "rank": 9,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 5446464,
+          "name": "James Oyedele",
+          "team": "Bishop Sycamore HS",
+          "total": 224,
+          "lastGW": 69,
+          "transfers": 16,
+          "hits": 4,
+          "rank": 10,
+          "move": 2,
+          "commissioner": false
+        },
+        {
+          "entry": 5774978,
+          "name": "Eduardo Baudet",
+          "team": "Craven a win",
+          "total": 218,
+          "lastGW": 51,
+          "transfers": 5,
+          "hits": 8,
+          "rank": 11,
+          "move": -2,
+          "commissioner": false
+        },
+        {
+          "entry": 8662156,
+          "name": "John Brennan",
+          "team": "AC Momento",
+          "total": 217,
+          "lastGW": 57,
+          "transfers": 0,
+          "hits": 0,
+          "rank": 12,
+          "move": -1,
+          "commissioner": false
+        },
+        {
+          "entry": 6295460,
+          "name": "Demi O",
+          "team": "Kvara-Demi",
+          "total": 197,
+          "lastGW": 50,
+          "transfers": 16,
+          "hits": 8,
+          "rank": 13,
+          "move": 0,
+          "commissioner": false
+        }
+      ],
+      "gwSummary": [
+        "Tzolis & Gromit is the fourth different leader in four weeks, scoring a week-high 108 to jump 5 places to 1st on 314 points.",
+        "The lead is 18 points over Inveniam Sport on 296, with David Ornstein 3rd on 293 and Mike's Team 4th on 289.",
+        "unbound had the week's lowest score with 47 points, against a league median of 69, and was the biggest faller, down 4 places to 8th on 256.",
+        "Show Me The Mane scored 98 on a Triple Captain and climbed 4 places to 6th on 268.",
+        "João Pedro of Chelsea was the most captained pick, worn by 5 of 13 managers, and returned 12 points.",
+        "The highest scoring player owned in this league was Groß of Brighton with 17 points, held by 3 of 13 managers.",
+        "Show Me The Mane played the only chip of the week, and 11 transfers were made across the league."
+      ],
+      "mostCaptained": {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 5,
+        "total": 13,
+        "pts": 12
+      },
+      "topPlayer": {
+        "name": "Groß",
+        "pos": "MID",
+        "team": "Brighton",
+        "color": "#0057B8",
+        "pts": 17,
+        "count": 3,
+        "total": 13
+      },
+      "mostOwned": [
+        {
+          "name": "Haaland",
+          "pos": "FWD",
+          "team": "Man City",
+          "color": "#6CABDD",
+          "count": 10,
+          "total": 13,
+          "gwPts": 9,
+          "seasonPts": 33
+        },
+        {
+          "name": "João Pedro",
+          "pos": "FWD",
+          "team": "Chelsea",
+          "color": "#034694",
+          "count": 9,
+          "total": 13,
+          "gwPts": 12,
+          "seasonPts": 33
+        },
+        {
+          "name": "B.Fernandes",
+          "pos": "MID",
+          "team": "Man Utd",
+          "color": "#DA291C",
+          "count": 9,
+          "total": 13,
+          "gwPts": 2,
+          "seasonPts": 29
+        }
+      ]
+    }
+  },
+  "chips": [
+    {
+      "manager": "Varadh Jain",
+      "team": "carrick's carnage",
+      "entry": 1451644,
+      "chip": "3xc",
+      "gw": 3,
+      "pts": 62
+    },
+    {
+      "manager": "Arun Basuljevic",
+      "team": "Inveniam Sport",
+      "entry": 8591449,
+      "chip": "3xc",
+      "gw": 3,
+      "pts": 60
+    },
+    {
+      "manager": "Damir Becirovic",
+      "team": "Show Me The Mane",
+      "entry": 5081378,
+      "chip": "3xc",
+      "gw": 4,
+      "pts": 98
+    },
+    {
+      "manager": "James Oyedele",
+      "team": "Bishop Sycamore HS",
+      "entry": 5446464,
+      "chip": "wildcard",
+      "gw": 2,
+      "pts": 73
+    },
+    {
+      "manager": "Lewis Malkin",
+      "team": "Tzolis & Gromit",
+      "entry": 4984818,
+      "chip": "wildcard",
+      "gw": 3,
+      "pts": 45
+    },
+    {
+      "manager": "Demi O",
+      "team": "Kvara-Demi",
+      "entry": 6295460,
+      "chip": "wildcard",
+      "gw": 3,
+      "pts": 45
+    }
+  ],
+  "notes": [
+    "Only gameweeks that FPL has marked both finished and data checked appear here, so a week never shows up before its bonus points have landed.",
+    "The gameweek picker in the header rewinds the Standings, the Recap and the League Metrics to any completed week. Chips Played and the Payouts tab always show the latest state.",
+    "Ranks for the current gameweek come straight from FPL's own league table, including how it splits ties. Earlier weeks are ranked on total points.",
+    "The movement arrow next to each manager's name compares this week's rank to last week's. Gameweek 1 has no arrows because it was the first snapshot.",
+    "\"Transfers\" counts every move a manager has made through the selected gameweek, including the ones made on a Wildcard or Free Hit. FPL's own transfer counter leaves those out because they are free and unlimited.",
+    "\"Hits\" is the points a manager has given up to transfers, four per move beyond the free one. Wildcard and Free Hit moves never cost a hit.",
+    "The whole season is recomputed from the FPL API on every update, so nothing on this page can drift out of sync with the official league table.",
+    "Team names in the Recap, the Standings and Chips Played all link to that team's official FPL page for the relevant gameweek."
+  ]
+};
+
+let CURRENT_DATA = null;
+let ACTIVE_CHIP = null;
+let SELECTED_GW = null;
+
+function arrowHTML(m){
+  if(m === null || m === undefined) return '';
+  if(m === 0) return '<span class="arrow flat">–</span>';
+  if(m > 0) return '<span class="arrow up">▲<span style="font-size:9px">'+m+'</span></span>';
+  return '<span class="arrow down">▼<span style="font-size:9px">'+Math.abs(m)+'</span></span>';
+}
+
+function chipLabel(c){ return CHIP_NAMES[c] || c; }
+
+// FPL entry pages are public, and the /event/N segment pins the view to that week.
+function entryURL(entryId, gw){
+  return 'https://fantasy.premierleague.com/entry/'+entryId+'/event/'+gw;
+}
+
+function teamLink(entryId, gw, label){
+  if(!entryId) return label;
+  return '<a href="'+entryURL(entryId, gw)+'" target="_blank" rel="noopener noreferrer">'+label+'</a>';
+}
+
+function escapeHTML(str){
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function escapeRegExp(str){
+  return String(str).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+}
+
+// Recap bullets are written as plain prose. Any team name that appears in one
+// becomes a link, so nobody has to hand-write anchor tags.
+function linkifyTeams(text, standings, gw){
+  const html = escapeHTML(text);
+  const named = (standings || []).filter(r => r.team && r.entry);
+  if(!named.length) return html;
+  const byName = {};
+  named.forEach(r => { byName[r.team] = r.entry; });
+  // longest first so a short name never shadows a longer one containing it
+  const pattern = named.map(r => escapeRegExp(escapeHTML(r.team)))
+    .sort((a,b) => b.length - a.length).join('|');
+  // no lookbehind: capture the preceding boundary and put it back
+  const re = new RegExp('(^|[^A-Za-z0-9])('+pattern+')(?![A-Za-z0-9])','g');
+  return html.replace(re, (m, pre, name) => {
+    const plain = name.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"');
+    return pre + teamLink(byName[plain], gw, name);
+  });
+}
+
+function gameweekList(data){
+  return Object.keys(data.gameweeks).map(Number).filter(n => !isNaN(n)).sort((a,b) => b - a);
+}
+
+function renderChipTable(){
+  const rows = CURRENT_DATA.chips.filter(c => c.chip === ACTIVE_CHIP);
+  document.getElementById('chipsBody').innerHTML = rows.length
+    ? rows.map(c => '<tr><td><div class="team">'+teamLink(c.entry, c.gw, escapeHTML(c.team))+'</div><div class="name">'+escapeHTML(c.manager)+'</div></td><td class="num" data-label="Gameweek">'+c.gw+'</td><td class="num" data-label="Points Haul">'+c.pts+'</td></tr>').join('')
+    : '<tr><td colspan="3" style="color:var(--muted)">No one has played '+chipLabel(ACTIVE_CHIP)+' yet.</td></tr>';
+}
+
+// Standings, Recap and League Metrics follow the gameweek picker. Everything
+// else on the page describes the season and does not move.
+function renderWeek(gw){
+  SELECTED_GW = gw;
+  const wk = CURRENT_DATA.gameweeks[String(gw)] || {standings:[], gwSummary:[], mostOwned:[]};
+  const isCurrent = (gw === CURRENT_DATA.throughGW);
+  const pastFlag = isCurrent ? '' : '<span class="pastflag">Past week</span>';
+
+  document.getElementById('standingsTitle').innerHTML =
+    (isCurrent ? 'Overall Standing' : 'Standing after Gameweek '+gw) + pastFlag;
+
+  document.getElementById('standingsBody').innerHTML = wk.standings.map(r => {
+    const leadTag = (r.rank === 1) ? '<span class="lead">TOP SPOT</span>' : '';
+    const commish = r.commissioner ? '<span class="commish"> · Commissioner</span>' : '';
+    const paid = (r.rank <= CURRENT_DATA.paidPlaces) ? ' class="paid"' : '';
+    return '<tr'+paid+'>'+
+      '<td data-label="Rank"><span class="rank">'+r.rank+'</span></td>'+
+      '<td><div class="team">'+teamLink(r.entry, gw, escapeHTML(r.team))+leadTag+'</div><div class="name">'+escapeHTML(r.name)+commish+' '+arrowHTML(r.move)+'</div></td>'+
+      '<td class="num pts" data-label="Total">'+r.total+'</td>'+
+      '<td class="num" data-label="GW Pts">'+r.lastGW+'</td>'+
+      '<td class="num" data-label="Transfers">'+r.transfers+'</td>'+
+      '<td class="num" data-label="Hits">'+(r.hits ? '-'+r.hits : '0')+'</td>'+
+    '</tr>';
+  }).join('');
+
+  document.getElementById('standingsFootnote').textContent =
+    'The green edge marks the top '+CURRENT_DATA.paidPlaces+' places, which are the paying positions.';
+
+  document.getElementById('gwSummaryTitle').innerHTML = 'Gameweek '+gw+' Recap' + pastFlag;
+  document.getElementById('gwSummarySub').textContent = isCurrent
+    ? 'TL;DR from this gameweek.'
+    : 'TL;DR from Gameweek '+gw+'. The league has played through Gameweek '+CURRENT_DATA.throughGW+' since.';
+  document.getElementById('gwSummaryList').innerHTML =
+    (wk.gwSummary || []).map(s => '<li>'+linkifyTeams(s, wk.standings, gw)+'</li>').join('');
+
+  document.getElementById('metricsTitle').innerHTML = 'League Metrics' + pastFlag;
+  document.getElementById('metricsSub').textContent = 'Captaincy, top scorer and ownership across the league in Gameweek '+gw+'.';
+
+  // A week can be published before its metrics are filled in. Show a dash
+  // rather than letting one missing field blank the whole page.
+  const mc = wk.mostCaptained;
+  document.getElementById('statCaptain').innerHTML = mc
+    ? escapeHTML(mc.name)+' ('+mc.pos+') <span class="teampill" style="background:'+mc.color+'">'+escapeHTML(mc.team)+'</span>'
+    : '—';
+  document.getElementById('statCaptainSub').textContent = mc
+    ? mc.count+' of '+mc.total+' managers ('+Math.round(100*mc.count/mc.total)+'%), returning '+mc.pts+' pts'
+    : 'Not recorded for this gameweek';
+
+  const tp = wk.topPlayer;
+  document.getElementById('statTopPlayer').innerHTML = tp
+    ? escapeHTML(tp.name)+' ('+tp.pos+') <span class="teampill" style="background:'+tp.color+'">'+escapeHTML(tp.team)+'</span>'
+    : '—';
+  document.getElementById('statTopPlayerSub').textContent = tp
+    ? tp.pts+' pts in GW'+gw+', owned by '+tp.count+' of '+tp.total+' managers'
+    : 'Not recorded for this gameweek';
+
+  document.getElementById('ownedList').innerHTML = (wk.mostOwned || []).map((o,i) => {
+    const pct = Math.round(100*o.count/o.total);
+    return '<li>'+
+      '<div class="toprow"><span class="pname">'+(i+1)+'. '+escapeHTML(o.name)+' ('+o.pos+')</span><span class="pct">'+pct+'% ('+o.count+'/'+o.total+')</span></div>'+
+      '<div class="botrow"><span class="teampill" style="background:'+o.color+'">'+escapeHTML(o.team)+'</span>'+
+      '<span class="ptsline">GW'+gw+': '+o.gwPts+' pts &nbsp;·&nbsp; Season to date: '+o.seasonPts+' pts</span></div>'+
+    '</li>';
+  }).join('');
+
+  document.getElementById('metricsFootnote').textContent =
+    'These metrics are for our league only, and cover Gameweek '+gw+'.';
+}
+
+function renderGwPicker(data){
+  const weeks = gameweekList(data);
+  const el = document.getElementById('gwPick');
+  if(weeks.length < 2){ el.innerHTML = ''; return; }
+  el.innerHTML =
+    '<label for="gwSelect">Viewing</label>'+
+    '<select id="gwSelect">'+
+      weeks.map(w => '<option value="'+w+'"'+(w===SELECTED_GW?' selected':'')+'>Gameweek '+w+(w===data.throughGW?' (current)':'')+'</option>').join('')+
+    '</select>'+
+    '<span class="hint">Standings, Recap and League Metrics follow this selection.</span>';
+  document.getElementById('gwSelect').addEventListener('change', e => renderWeek(Number(e.target.value)));
+}
+
+function render(data){
+  CURRENT_DATA = data;
+  SELECTED_GW = data.throughGW;
+
+  document.title = data.leagueName + ' — Tracker';
+  document.getElementById('pageTitle').textContent = data.leagueName;
+
+  document.getElementById('metaLine').innerHTML =
+    '<span>Through <b>Gameweek '+data.throughGW+'</b></span>'+
+    '<span><b>'+data.managerCount+'</b> managers</span>'+
+    '<span>Updated <b>'+data.updated+'</b></span>';
+
+  const p = data.pot;
+  document.getElementById('potGrid').innerHTML =
+    '<div class="potbox"><div class="n">'+p.totalPot+'</div><div class="l">Total Pot</div><div class="s">'+p.buyInCaption+'</div></div>'+
+    '<div class="potbox"><div class="n">'+p.participants+'</div><div class="l">Managers</div><div class="s">everyone paid in</div></div>'+
+    '<div class="potbox"><div class="n">Top '+data.paidPlaces+'</div><div class="l">Paying Places</div><div class="s">'+p.splitCaption+'</div></div>';
+
+  document.getElementById('payoutTitle').textContent = data.payoutFinal ? 'Final Payout' : 'Projected Payout';
+  document.getElementById('payoutSub').textContent = data.payoutFinal
+    ? 'The season is complete. These are the final places and payouts.'
+    : 'If the season ended today, based on current total points. Nothing here is final until the season ends.';
+  if(data.payoutFinal){ document.getElementById('payoutTable').classList.add('final'); }
+
+  document.getElementById('payoutBody').innerHTML = data.payouts.map(pr => {
+    return '<tr><td>'+pr.place+'</td><td data-label="Manager">'+escapeHTML(pr.name)+'</td>'+
+      '<td data-label="Team">'+escapeHTML(pr.team)+'</td>'+
+      '<td class="num" data-label="Pts">'+(pr.pts === null ? '—' : pr.pts)+'</td>'+
+      '<td class="num money" data-label="Payout">'+pr.payout+'</td></tr>';
+  }).join('');
+  document.getElementById('payoutFootnote').textContent = data.payoutFootnote;
+
+  const chipsPlayed = [];
+  data.chips.forEach(c => { if(chipsPlayed.indexOf(c.chip) === -1) chipsPlayed.push(c.chip); });
+  const chipOrder = ["bboost","3xc","freehit","wildcard","manager"]
+    .filter(c => chipsPlayed.indexOf(c) !== -1)
+    .concat(chipsPlayed.filter(c => ["bboost","3xc","freehit","wildcard","manager"].indexOf(c) === -1));
+  const buttons = chipOrder.length ? chipOrder : ["bboost","3xc","freehit","wildcard"];
+  ACTIVE_CHIP = buttons[0];
+  document.getElementById('chipBtns').innerHTML = buttons.map(c =>
+    '<button class="chip-btn'+(c===ACTIVE_CHIP?' active':'')+'" data-chip="'+c+'">'+chipLabel(c)+'</button>'
+  ).join('');
+  document.querySelectorAll('.chip-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      ACTIVE_CHIP = btn.dataset.chip;
+      document.querySelectorAll('.chip-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      renderChipTable();
+    });
+  });
+  renderChipTable();
+
+  renderGwPicker(data);
+  renderWeek(SELECTED_GW);
+
+  document.getElementById('notesList').innerHTML = data.notes.map(n => '<li>'+n+'</li>').join('');
+
+  document.getElementById('siteFooter').innerHTML =
+    'Questions or suggestions? Email <a href="mailto:'+data.contactEmail+'">'+data.contactEmail+'</a>.';
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.panel).classList.add('active');
+  });
+});
+
+render(DEFAULT_DATA);
+</script>

@@ -827,5 +827,216 @@
         "move": 0
       }
     ]
+  },
+  "5": {
+    "gw": 5,
+    "managers": 13,
+    "leader": {
+      "team": "David Ornstein",
+      "manager": "Arinjay Singhai",
+      "total": 382,
+      "gwPts": 89
+    },
+    "leadChanged": true,
+    "previousLeader": {
+      "team": "Tzolis & Gromit",
+      "total": 314,
+      "rank": 2
+    },
+    "leadMargin": 24,
+    "highestScore": {
+      "team": "David Ornstein",
+      "manager": "Arinjay Singhai",
+      "pts": 89,
+      "rank": 1
+    },
+    "lowestScore": {
+      "team": "AC Momento",
+      "manager": "John Brennan",
+      "pts": 28,
+      "rank": 13
+    },
+    "medianScore": 47,
+    "biggestRiser": {
+      "team": "David Ornstein",
+      "places": 2,
+      "rank": 1,
+      "total": 382,
+      "gwPts": 89
+    },
+    "biggestFaller": {
+      "team": "Tzolis & Gromit",
+      "places": -1,
+      "rank": 2,
+      "total": 358,
+      "gwPts": 44
+    },
+    "mostCaptained": {
+      "name": "Haaland",
+      "pos": "FWD",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "count": 9,
+      "total": 13,
+      "pts": 6
+    },
+    "topPlayer": {
+      "name": "Semenyo",
+      "pos": "MID",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "pts": 17,
+      "count": 2,
+      "total": 13
+    },
+    "mostOwned": [
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 10,
+        "total": 13,
+        "gwPts": 6,
+        "seasonPts": 39
+      },
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 9,
+        "total": 13,
+        "gwPts": 2,
+        "seasonPts": 31
+      },
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 8,
+        "total": 13,
+        "gwPts": 0,
+        "seasonPts": 33
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "bboost",
+        "label": "Bench Boost",
+        "count": 1,
+        "teams": [
+          "Show Me The Mane"
+        ]
+      }
+    ],
+    "totalTransfers": 10,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "David Ornstein",
+        "manager": "Arinjay Singhai",
+        "total": 382,
+        "gwPts": 89,
+        "move": 2
+      },
+      {
+        "rank": 2,
+        "team": "Tzolis & Gromit",
+        "manager": "Lewis Malkin",
+        "total": 358,
+        "gwPts": 44,
+        "move": -1
+      },
+      {
+        "rank": 3,
+        "team": "Inveniam Sport",
+        "manager": "Arun Basuljevic",
+        "total": 351,
+        "gwPts": 55,
+        "move": -1
+      },
+      {
+        "rank": 4,
+        "team": "Mike's Team",
+        "manager": "Mike Shapiro",
+        "total": 330,
+        "gwPts": 41,
+        "move": 0
+      },
+      {
+        "rank": 5,
+        "team": "DCTeam",
+        "manager": "Dawid Cedrych",
+        "total": 325,
+        "gwPts": 60,
+        "move": 2
+      },
+      {
+        "rank": 6,
+        "team": "Budapest",
+        "manager": "Shreman Shrestha",
+        "total": 323,
+        "gwPts": 50,
+        "move": -1
+      },
+      {
+        "rank": 7,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 315,
+        "gwPts": 47,
+        "move": -1
+      },
+      {
+        "rank": 8,
+        "team": "unbound",
+        "manager": "Shravin Mittal",
+        "total": 301,
+        "gwPts": 45,
+        "move": 0
+      },
+      {
+        "rank": 9,
+        "team": "carrick's carnage",
+        "manager": "Varadh Jain",
+        "total": 289,
+        "gwPts": 36,
+        "move": 0
+      },
+      {
+        "rank": 10,
+        "team": "Bishop Sycamore HS",
+        "manager": "James Oyedele",
+        "total": 274,
+        "gwPts": 50,
+        "move": 0
+      },
+      {
+        "rank": 11,
+        "team": "Craven a win",
+        "manager": "Eduardo Baudet",
+        "total": 259,
+        "gwPts": 41,
+        "move": 0
+      },
+      {
+        "rank": 12,
+        "team": "Kvara-Demi",
+        "manager": "Demi O",
+        "total": 246,
+        "gwPts": 49,
+        "move": 1
+      },
+      {
+        "rank": 13,
+        "team": "AC Momento",
+        "manager": "John Brennan",
+        "total": 245,
+        "gwPts": 28,
+        "move": -1
+      }
+    ]
   }
 }

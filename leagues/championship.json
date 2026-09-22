@@ -1,0 +1,18 @@
+{
+  "league_id": 1166922,
+  "page_title": "FPL Championship Tracker",
+  "buy_in": 300,
+  "payout_pcts": {
+    "1": 0.5,
+    "2": 0.2,
+    "3": 0.15,
+    "4": 0.1,
+    "5": 0.05
+  },
+  "commissioner_name": "Damir Becirovic",
+  "commissioner_team": "Show me the Mane",
+  "contact_email": "adamslj5@gmail.com",
+  "outdir": "out",
+  "recap_dir": "recaps",
+  "artifact_url": "https://claude.ai/code/artifact/18b62565-da55-4199-9262-73ebdde14b76"
+}

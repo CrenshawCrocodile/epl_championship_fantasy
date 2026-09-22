@@ -1,0 +1,1423 @@
+{
+  "1": {
+    "gw": 1,
+    "managers": 21,
+    "leader": {
+      "team": "KT BlueCo FFH",
+      "manager": "Whitney Baxter",
+      "total": 75,
+      "gwPts": 75
+    },
+    "leadChanged": false,
+    "previousLeader": null,
+    "leadMargin": 1,
+    "highestScore": {
+      "team": "KT BlueCo FFH",
+      "manager": "Whitney Baxter",
+      "pts": 75,
+      "rank": 1
+    },
+    "lowestScore": {
+      "team": "Show Me The Mane",
+      "manager": "Damir Becirovic",
+      "pts": 34,
+      "rank": 21
+    },
+    "medianScore": 55,
+    "biggestRiser": null,
+    "biggestFaller": null,
+    "mostCaptained": {
+      "name": "B.Fernandes",
+      "pos": "MID",
+      "team": "Man Utd",
+      "color": "#DA291C",
+      "count": 10,
+      "total": 21,
+      "pts": 2
+    },
+    "topPlayer": {
+      "name": "Gakpo",
+      "pos": "MID",
+      "team": "Liverpool",
+      "color": "#C8102E",
+      "pts": 12,
+      "count": 1,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 19,
+        "total": 21,
+        "gwPts": 11,
+        "seasonPts": 11
+      },
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 19,
+        "total": 21,
+        "gwPts": 2,
+        "seasonPts": 2
+      },
+      {
+        "name": "Mbeumo",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 17,
+        "total": 21,
+        "gwPts": 2,
+        "seasonPts": 2
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "bboost",
+        "label": "Bench Boost",
+        "count": 8,
+        "teams": [
+          "KT BlueCo FFH",
+          "champs again ole ole",
+          "Calafiori Dreaming",
+          "Laurent's Team",
+          "Evergreen Old Boys",
+          "Swart Rangers FC",
+          "itscominghometousa",
+          "State of the Arteta"
+        ]
+      }
+    ],
+    "totalTransfers": 0,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "KT BlueCo FFH",
+        "manager": "Whitney Baxter",
+        "total": 75,
+        "gwPts": 75,
+        "move": null
+      },
+      {
+        "rank": 2,
+        "team": "champs again ole ole",
+        "manager": "RJ Halperin",
+        "total": 74,
+        "gwPts": 74,
+        "move": null
+      },
+      {
+        "rank": 3,
+        "team": "Calafiori Dreaming",
+        "manager": "Aaref Hilaly",
+        "total": 72,
+        "gwPts": 72,
+        "move": null
+      },
+      {
+        "rank": 4,
+        "team": "Laurent's Team",
+        "manager": "Laurent Grill",
+        "total": 71,
+        "gwPts": 71,
+        "move": null
+      },
+      {
+        "rank": 5,
+        "team": "Evergreen Old Boys",
+        "manager": "Derrick Ko",
+        "total": 68,
+        "gwPts": 68,
+        "move": null
+      },
+      {
+        "rank": 6,
+        "team": "Baba Marmoush",
+        "manager": "Warren Loegering",
+        "total": 66,
+        "gwPts": 66,
+        "move": null
+      },
+      {
+        "rank": 7,
+        "team": "Swart Rangers FC",
+        "manager": "George Benton",
+        "total": 61,
+        "gwPts": 61,
+        "move": null
+      },
+      {
+        "rank": 8,
+        "team": "chapter 1",
+        "manager": "Samir Sama",
+        "total": 59,
+        "gwPts": 59,
+        "move": null
+      },
+      {
+        "rank": 9,
+        "team": "itscominghometousa",
+        "manager": "Luke Thompson",
+        "total": 58,
+        "gwPts": 58,
+        "move": null
+      },
+      {
+        "rank": 10,
+        "team": "Bins & Biscuits",
+        "manager": "Billy Knutsen",
+        "total": 56,
+        "gwPts": 56,
+        "move": null
+      },
+      {
+        "rank": 11,
+        "team": "Cunha Believe It",
+        "manager": "Tanay Jaipuria",
+        "total": 55,
+        "gwPts": 55,
+        "move": null
+      },
+      {
+        "rank": 11,
+        "team": "State of the Arteta",
+        "manager": "Nabeel Hyatt",
+        "total": 55,
+        "gwPts": 55,
+        "move": null
+      },
+      {
+        "rank": 13,
+        "team": "<3teta",
+        "manager": "Sunil Chhaya",
+        "total": 52,
+        "gwPts": 52,
+        "move": null
+      },
+      {
+        "rank": 13,
+        "team": "Mind over Mata",
+        "manager": "Sriram Krishnan",
+        "total": 52,
+        "gwPts": 52,
+        "move": null
+      },
+      {
+        "rank": 15,
+        "team": "Corner Kick FC",
+        "manager": "Peter Lenke",
+        "total": 51,
+        "gwPts": 51,
+        "move": null
+      },
+      {
+        "rank": 16,
+        "team": "saka potatoes",
+        "manager": "Sridhar Krishnan",
+        "total": 50,
+        "gwPts": 50,
+        "move": null
+      },
+      {
+        "rank": 17,
+        "team": "Portspooluva",
+        "manager": "Tyler Crown",
+        "total": 46,
+        "gwPts": 46,
+        "move": null
+      },
+      {
+        "rank": 17,
+        "team": "Youriallycost35",
+        "manager": "Sanjay Reddy",
+        "total": 46,
+        "gwPts": 46,
+        "move": null
+      },
+      {
+        "rank": 19,
+        "team": "SixCars&AGrizzlyBear",
+        "manager": "Chris Hollindale",
+        "total": 44,
+        "gwPts": 44,
+        "move": null
+      },
+      {
+        "rank": 20,
+        "team": "Young Guns",
+        "manager": "Ali Afridi",
+        "total": 35,
+        "gwPts": 35,
+        "move": null
+      },
+      {
+        "rank": 21,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 34,
+        "gwPts": 34,
+        "move": null
+      }
+    ]
+  },
+  "2": {
+    "gw": 2,
+    "managers": 21,
+    "leader": {
+      "team": "Calafiori Dreaming",
+      "manager": "Aaref Hilaly",
+      "total": 194,
+      "gwPts": 122
+    },
+    "leadChanged": true,
+    "previousLeader": {
+      "team": "KT BlueCo FFH",
+      "total": 75,
+      "rank": 6
+    },
+    "leadMargin": 3,
+    "highestScore": {
+      "team": "Mind over Mata",
+      "manager": "Sriram Krishnan",
+      "pts": 134,
+      "rank": 4
+    },
+    "lowestScore": {
+      "team": "SixCars&AGrizzlyBear",
+      "manager": "Chris Hollindale",
+      "pts": 76,
+      "rank": 21
+    },
+    "medianScore": 104,
+    "biggestRiser": {
+      "team": "Mind over Mata",
+      "places": 9,
+      "rank": 4,
+      "total": 186,
+      "gwPts": 134
+    },
+    "biggestFaller": {
+      "team": "Bins & Biscuits",
+      "places": -7,
+      "rank": 17,
+      "total": 140,
+      "gwPts": 84
+    },
+    "mostCaptained": {
+      "name": "B.Fernandes",
+      "pos": "MID",
+      "team": "Man Utd",
+      "color": "#DA291C",
+      "count": 14,
+      "total": 21,
+      "pts": 23
+    },
+    "topPlayer": {
+      "name": "B.Fernandes",
+      "pos": "MID",
+      "team": "Man Utd",
+      "color": "#DA291C",
+      "pts": 23,
+      "count": 19,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 20,
+        "total": 21,
+        "gwPts": 9,
+        "seasonPts": 20
+      },
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 19,
+        "total": 21,
+        "gwPts": 23,
+        "seasonPts": 25
+      },
+      {
+        "name": "Mbeumo",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 17,
+        "total": 21,
+        "gwPts": 11,
+        "seasonPts": 13
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "bboost",
+        "label": "Bench Boost",
+        "count": 3,
+        "teams": [
+          "Mind over Mata",
+          "Baba Marmoush",
+          "chapter 1"
+        ]
+      }
+    ],
+    "totalTransfers": 6,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "Calafiori Dreaming",
+        "manager": "Aaref Hilaly",
+        "total": 194,
+        "gwPts": 122,
+        "move": 2
+      },
+      {
+        "rank": 2,
+        "team": "Laurent's Team",
+        "manager": "Laurent Grill",
+        "total": 191,
+        "gwPts": 120,
+        "move": 2
+      },
+      {
+        "rank": 3,
+        "team": "Baba Marmoush",
+        "manager": "Warren Loegering",
+        "total": 190,
+        "gwPts": 124,
+        "move": 3
+      },
+      {
+        "rank": 4,
+        "team": "Mind over Mata",
+        "manager": "Sriram Krishnan",
+        "total": 186,
+        "gwPts": 134,
+        "move": 9
+      },
+      {
+        "rank": 5,
+        "team": "champs again ole ole",
+        "manager": "RJ Halperin",
+        "total": 182,
+        "gwPts": 108,
+        "move": -3
+      },
+      {
+        "rank": 6,
+        "team": "KT BlueCo FFH",
+        "manager": "Whitney Baxter",
+        "total": 179,
+        "gwPts": 104,
+        "move": -5
+      },
+      {
+        "rank": 7,
+        "team": "chapter 1",
+        "manager": "Samir Sama",
+        "total": 176,
+        "gwPts": 117,
+        "move": 1
+      },
+      {
+        "rank": 8,
+        "team": "Evergreen Old Boys",
+        "manager": "Derrick Ko",
+        "total": 173,
+        "gwPts": 105,
+        "move": -3
+      },
+      {
+        "rank": 9,
+        "team": "Cunha Believe It",
+        "manager": "Tanay Jaipuria",
+        "total": 165,
+        "gwPts": 110,
+        "move": 2
+      },
+      {
+        "rank": 10,
+        "team": "Swart Rangers FC",
+        "manager": "George Benton",
+        "total": 162,
+        "gwPts": 101,
+        "move": -3
+      },
+      {
+        "rank": 10,
+        "team": "itscominghometousa",
+        "manager": "Luke Thompson",
+        "total": 162,
+        "gwPts": 104,
+        "move": -1
+      },
+      {
+        "rank": 12,
+        "team": "State of the Arteta",
+        "manager": "Nabeel Hyatt",
+        "total": 157,
+        "gwPts": 102,
+        "move": -1
+      },
+      {
+        "rank": 12,
+        "team": "Youriallycost35",
+        "manager": "Sanjay Reddy",
+        "total": 157,
+        "gwPts": 111,
+        "move": 5
+      },
+      {
+        "rank": 14,
+        "team": "Portspooluva",
+        "manager": "Tyler Crown",
+        "total": 147,
+        "gwPts": 101,
+        "move": 3
+      },
+      {
+        "rank": 15,
+        "team": "Corner Kick FC",
+        "manager": "Peter Lenke",
+        "total": 146,
+        "gwPts": 95,
+        "move": 0
+      },
+      {
+        "rank": 16,
+        "team": "saka potatoes",
+        "manager": "Sridhar Krishnan",
+        "total": 143,
+        "gwPts": 93,
+        "move": 0
+      },
+      {
+        "rank": 17,
+        "team": "Bins & Biscuits",
+        "manager": "Billy Knutsen",
+        "total": 140,
+        "gwPts": 84,
+        "move": -7
+      },
+      {
+        "rank": 18,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 134,
+        "gwPts": 100,
+        "move": 3
+      },
+      {
+        "rank": 19,
+        "team": "<3teta",
+        "manager": "Sunil Chhaya",
+        "total": 133,
+        "gwPts": 81,
+        "move": -6
+      },
+      {
+        "rank": 20,
+        "team": "Young Guns",
+        "manager": "Ali Afridi",
+        "total": 129,
+        "gwPts": 94,
+        "move": 0
+      },
+      {
+        "rank": 21,
+        "team": "SixCars&AGrizzlyBear",
+        "manager": "Chris Hollindale",
+        "total": 120,
+        "gwPts": 76,
+        "move": -2
+      }
+    ]
+  },
+  "3": {
+    "gw": 3,
+    "managers": 21,
+    "leader": {
+      "team": "Baba Marmoush",
+      "manager": "Warren Loegering",
+      "total": 259,
+      "gwPts": 69
+    },
+    "leadChanged": true,
+    "previousLeader": {
+      "team": "Calafiori Dreaming",
+      "total": 194,
+      "rank": 6
+    },
+    "leadMargin": 14,
+    "highestScore": {
+      "team": "SixCars&AGrizzlyBear",
+      "manager": "Chris Hollindale",
+      "pts": 77,
+      "rank": 16
+    },
+    "lowestScore": {
+      "team": "Show Me The Mane",
+      "manager": "Damir Becirovic",
+      "pts": 36,
+      "rank": 20
+    },
+    "medianScore": 52,
+    "biggestRiser": {
+      "team": "SixCars&AGrizzlyBear",
+      "places": 5,
+      "rank": 16,
+      "total": 197,
+      "gwPts": 77
+    },
+    "biggestFaller": {
+      "team": "Calafiori Dreaming",
+      "places": -5,
+      "rank": 6,
+      "total": 230,
+      "gwPts": 36
+    },
+    "mostCaptained": {
+      "name": "Haaland",
+      "pos": "FWD",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "count": 18,
+      "total": 21,
+      "pts": 9
+    },
+    "topPlayer": {
+      "name": "Mitchell",
+      "pos": "DEF",
+      "team": "Crystal Palace",
+      "color": "#1B458F",
+      "pts": 15,
+      "count": 1,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 18,
+        "total": 21,
+        "gwPts": 9,
+        "seasonPts": 24
+      },
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 18,
+        "total": 21,
+        "gwPts": 1,
+        "seasonPts": 21
+      },
+      {
+        "name": "B.Fernandes",
+        "pos": "MID",
+        "team": "Man Utd",
+        "color": "#DA291C",
+        "count": 15,
+        "total": 21,
+        "gwPts": 2,
+        "seasonPts": 27
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "3xc",
+        "label": "Triple Captain",
+        "count": 8,
+        "teams": [
+          "SixCars&AGrizzlyBear",
+          "Mind over Mata",
+          "Laurent's Team",
+          "KT BlueCo FFH",
+          "Swart Rangers FC",
+          "Youriallycost35",
+          "champs again ole ole",
+          "Bins & Biscuits"
+        ]
+      },
+      {
+        "chip": "freehit",
+        "label": "Free Hit",
+        "count": 2,
+        "teams": [
+          "Baba Marmoush",
+          "Evergreen Old Boys"
+        ]
+      },
+      {
+        "chip": "wildcard",
+        "label": "Wildcard",
+        "count": 2,
+        "teams": [
+          "itscominghometousa",
+          "Calafiori Dreaming"
+        ]
+      }
+    ],
+    "totalTransfers": 134,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "Baba Marmoush",
+        "manager": "Warren Loegering",
+        "total": 259,
+        "gwPts": 69,
+        "move": 2
+      },
+      {
+        "rank": 2,
+        "team": "Laurent's Team",
+        "manager": "Laurent Grill",
+        "total": 245,
+        "gwPts": 54,
+        "move": 0
+      },
+      {
+        "rank": 3,
+        "team": "Mind over Mata",
+        "manager": "Sriram Krishnan",
+        "total": 244,
+        "gwPts": 58,
+        "move": 1
+      },
+      {
+        "rank": 4,
+        "team": "chapter 1",
+        "manager": "Samir Sama",
+        "total": 239,
+        "gwPts": 63,
+        "move": 3
+      },
+      {
+        "rank": 5,
+        "team": "KT BlueCo FFH",
+        "manager": "Whitney Baxter",
+        "total": 233,
+        "gwPts": 54,
+        "move": 1
+      },
+      {
+        "rank": 6,
+        "team": "Calafiori Dreaming",
+        "manager": "Aaref Hilaly",
+        "total": 230,
+        "gwPts": 36,
+        "move": -5
+      },
+      {
+        "rank": 6,
+        "team": "champs again ole ole",
+        "manager": "RJ Halperin",
+        "total": 230,
+        "gwPts": 48,
+        "move": -1
+      },
+      {
+        "rank": 8,
+        "team": "Evergreen Old Boys",
+        "manager": "Derrick Ko",
+        "total": 223,
+        "gwPts": 50,
+        "move": 0
+      },
+      {
+        "rank": 9,
+        "team": "Cunha Believe It",
+        "manager": "Tanay Jaipuria",
+        "total": 218,
+        "gwPts": 53,
+        "move": 0
+      },
+      {
+        "rank": 10,
+        "team": "Swart Rangers FC",
+        "manager": "George Benton",
+        "total": 214,
+        "gwPts": 52,
+        "move": 0
+      },
+      {
+        "rank": 11,
+        "team": "itscominghometousa",
+        "manager": "Luke Thompson",
+        "total": 208,
+        "gwPts": 46,
+        "move": -1
+      },
+      {
+        "rank": 12,
+        "team": "Youriallycost35",
+        "manager": "Sanjay Reddy",
+        "total": 206,
+        "gwPts": 49,
+        "move": 0
+      },
+      {
+        "rank": 13,
+        "team": "Corner Kick FC",
+        "manager": "Peter Lenke",
+        "total": 202,
+        "gwPts": 56,
+        "move": 2
+      },
+      {
+        "rank": 14,
+        "team": "Portspooluva",
+        "manager": "Tyler Crown",
+        "total": 199,
+        "gwPts": 56,
+        "move": 0
+      },
+      {
+        "rank": 15,
+        "team": "State of the Arteta",
+        "manager": "Nabeel Hyatt",
+        "total": 198,
+        "gwPts": 41,
+        "move": -3
+      },
+      {
+        "rank": 16,
+        "team": "SixCars&AGrizzlyBear",
+        "manager": "Chris Hollindale",
+        "total": 197,
+        "gwPts": 77,
+        "move": 5
+      },
+      {
+        "rank": 17,
+        "team": "Bins & Biscuits",
+        "manager": "Billy Knutsen",
+        "total": 188,
+        "gwPts": 48,
+        "move": 0
+      },
+      {
+        "rank": 18,
+        "team": "saka potatoes",
+        "manager": "Sridhar Krishnan",
+        "total": 187,
+        "gwPts": 44,
+        "move": -2
+      },
+      {
+        "rank": 19,
+        "team": "<3teta",
+        "manager": "Sunil Chhaya",
+        "total": 186,
+        "gwPts": 53,
+        "move": 0
+      },
+      {
+        "rank": 20,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 170,
+        "gwPts": 36,
+        "move": -2
+      },
+      {
+        "rank": 20,
+        "team": "Young Guns",
+        "manager": "Ali Afridi",
+        "total": 170,
+        "gwPts": 41,
+        "move": 0
+      }
+    ]
+  },
+  "4": {
+    "gw": 4,
+    "managers": 21,
+    "leader": {
+      "team": "Laurent's Team",
+      "manager": "Laurent Grill",
+      "total": 342,
+      "gwPts": 97
+    },
+    "leadChanged": true,
+    "previousLeader": {
+      "team": "Baba Marmoush",
+      "total": 259,
+      "rank": 2
+    },
+    "leadMargin": 17,
+    "highestScore": {
+      "team": "Show Me The Mane",
+      "manager": "Damir Becirovic",
+      "pts": 98,
+      "rank": 16
+    },
+    "lowestScore": {
+      "team": "saka potatoes",
+      "manager": "Sridhar Krishnan",
+      "pts": 48,
+      "rank": 21
+    },
+    "medianScore": 81,
+    "biggestRiser": {
+      "team": "<3teta",
+      "places": 5,
+      "rank": 14,
+      "total": 276,
+      "gwPts": 90
+    },
+    "biggestFaller": {
+      "team": "State of the Arteta",
+      "places": -4,
+      "rank": 19,
+      "total": 254,
+      "gwPts": 56
+    },
+    "mostCaptained": {
+      "name": "Palmer",
+      "pos": "MID",
+      "team": "Chelsea",
+      "color": "#034694",
+      "count": 9,
+      "total": 21,
+      "pts": 5
+    },
+    "topPlayer": {
+      "name": "Groß",
+      "pos": "MID",
+      "team": "Brighton",
+      "color": "#0057B8",
+      "pts": 17,
+      "count": 6,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 21,
+        "total": 21,
+        "gwPts": 12,
+        "seasonPts": 33
+      },
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 16,
+        "total": 21,
+        "gwPts": 9,
+        "seasonPts": 33
+      },
+      {
+        "name": "Calafiori",
+        "pos": "DEF",
+        "team": "Arsenal",
+        "color": "#EF0107",
+        "count": 15,
+        "total": 21,
+        "gwPts": 6,
+        "seasonPts": 28
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "3xc",
+        "label": "Triple Captain",
+        "count": 2,
+        "teams": [
+          "Show Me The Mane",
+          "Baba Marmoush"
+        ]
+      },
+      {
+        "chip": "wildcard",
+        "label": "Wildcard",
+        "count": 2,
+        "teams": [
+          "Laurent's Team",
+          "Young Guns"
+        ]
+      }
+    ],
+    "totalTransfers": 42,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "Laurent's Team",
+        "manager": "Laurent Grill",
+        "total": 342,
+        "gwPts": 97,
+        "move": 1
+      },
+      {
+        "rank": 2,
+        "team": "Baba Marmoush",
+        "manager": "Warren Loegering",
+        "total": 325,
+        "gwPts": 66,
+        "move": -1
+      },
+      {
+        "rank": 3,
+        "team": "Mind over Mata",
+        "manager": "Sriram Krishnan",
+        "total": 324,
+        "gwPts": 80,
+        "move": 0
+      },
+      {
+        "rank": 4,
+        "team": "Calafiori Dreaming",
+        "manager": "Aaref Hilaly",
+        "total": 322,
+        "gwPts": 92,
+        "move": 2
+      },
+      {
+        "rank": 5,
+        "team": "KT BlueCo FFH",
+        "manager": "Whitney Baxter",
+        "total": 317,
+        "gwPts": 84,
+        "move": 0
+      },
+      {
+        "rank": 6,
+        "team": "chapter 1",
+        "manager": "Samir Sama",
+        "total": 313,
+        "gwPts": 74,
+        "move": -2
+      },
+      {
+        "rank": 7,
+        "team": "Cunha Believe It",
+        "manager": "Tanay Jaipuria",
+        "total": 307,
+        "gwPts": 89,
+        "move": 2
+      },
+      {
+        "rank": 8,
+        "team": "Evergreen Old Boys",
+        "manager": "Derrick Ko",
+        "total": 304,
+        "gwPts": 81,
+        "move": 0
+      },
+      {
+        "rank": 9,
+        "team": "champs again ole ole",
+        "manager": "RJ Halperin",
+        "total": 299,
+        "gwPts": 69,
+        "move": -3
+      },
+      {
+        "rank": 10,
+        "team": "Swart Rangers FC",
+        "manager": "George Benton",
+        "total": 297,
+        "gwPts": 87,
+        "move": 0
+      },
+      {
+        "rank": 11,
+        "team": "itscominghometousa",
+        "manager": "Luke Thompson",
+        "total": 295,
+        "gwPts": 87,
+        "move": 0
+      },
+      {
+        "rank": 12,
+        "team": "Youriallycost35",
+        "manager": "Sanjay Reddy",
+        "total": 290,
+        "gwPts": 84,
+        "move": 0
+      },
+      {
+        "rank": 13,
+        "team": "Corner Kick FC",
+        "manager": "Peter Lenke",
+        "total": 282,
+        "gwPts": 80,
+        "move": 0
+      },
+      {
+        "rank": 14,
+        "team": "<3teta",
+        "manager": "Sunil Chhaya",
+        "total": 276,
+        "gwPts": 90,
+        "move": 5
+      },
+      {
+        "rank": 14,
+        "team": "SixCars&AGrizzlyBear",
+        "manager": "Chris Hollindale",
+        "total": 276,
+        "gwPts": 79,
+        "move": 2
+      },
+      {
+        "rank": 16,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 268,
+        "gwPts": 98,
+        "move": 4
+      },
+      {
+        "rank": 17,
+        "team": "Portspooluva",
+        "manager": "Tyler Crown",
+        "total": 266,
+        "gwPts": 67,
+        "move": -3
+      },
+      {
+        "rank": 18,
+        "team": "Young Guns",
+        "manager": "Ali Afridi",
+        "total": 258,
+        "gwPts": 88,
+        "move": 2
+      },
+      {
+        "rank": 19,
+        "team": "State of the Arteta",
+        "manager": "Nabeel Hyatt",
+        "total": 254,
+        "gwPts": 56,
+        "move": -4
+      },
+      {
+        "rank": 20,
+        "team": "Bins & Biscuits",
+        "manager": "Billy Knutsen",
+        "total": 250,
+        "gwPts": 66,
+        "move": -3
+      },
+      {
+        "rank": 21,
+        "team": "saka potatoes",
+        "manager": "Sridhar Krishnan",
+        "total": 235,
+        "gwPts": 48,
+        "move": -3
+      }
+    ]
+  },
+  "5": {
+    "gw": 5,
+    "managers": 21,
+    "leader": {
+      "team": "Laurent's Team",
+      "manager": "Laurent Grill",
+      "total": 385,
+      "gwPts": 43
+    },
+    "leadChanged": false,
+    "previousLeader": {
+      "team": "Laurent's Team",
+      "total": 342,
+      "rank": 1
+    },
+    "leadMargin": 12,
+    "highestScore": {
+      "team": "State of the Arteta",
+      "manager": "Nabeel Hyatt",
+      "pts": 56,
+      "rank": 19
+    },
+    "lowestScore": {
+      "team": "Corner Kick FC",
+      "manager": "Peter Lenke",
+      "pts": 33,
+      "rank": 16
+    },
+    "medianScore": 44,
+    "biggestRiser": {
+      "team": "Portspooluva",
+      "places": 3,
+      "rank": 14,
+      "total": 317,
+      "gwPts": 55
+    },
+    "biggestFaller": {
+      "team": "Baba Marmoush",
+      "places": -3,
+      "rank": 5,
+      "total": 363,
+      "gwPts": 38
+    },
+    "mostCaptained": {
+      "name": "Haaland",
+      "pos": "FWD",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "count": 17,
+      "total": 21,
+      "pts": 6
+    },
+    "topPlayer": {
+      "name": "Semenyo",
+      "pos": "MID",
+      "team": "Man City",
+      "color": "#6CABDD",
+      "pts": 17,
+      "count": 2,
+      "total": 21
+    },
+    "mostOwned": [
+      {
+        "name": "Haaland",
+        "pos": "FWD",
+        "team": "Man City",
+        "color": "#6CABDD",
+        "count": 19,
+        "total": 21,
+        "gwPts": 6,
+        "seasonPts": 39
+      },
+      {
+        "name": "João Pedro",
+        "pos": "FWD",
+        "team": "Chelsea",
+        "color": "#034694",
+        "count": 15,
+        "total": 21,
+        "gwPts": 0,
+        "seasonPts": 33
+      },
+      {
+        "name": "Calafiori",
+        "pos": "DEF",
+        "team": "Arsenal",
+        "color": "#EF0107",
+        "count": 14,
+        "total": 21,
+        "gwPts": 1,
+        "seasonPts": 29
+      }
+    ],
+    "chipsPlayed": [
+      {
+        "chip": "wildcard",
+        "label": "Wildcard",
+        "count": 3,
+        "teams": [
+          "Evergreen Old Boys",
+          "chapter 1",
+          "Baba Marmoush"
+        ]
+      },
+      {
+        "chip": "bboost",
+        "label": "Bench Boost",
+        "count": 1,
+        "teams": [
+          "Show Me The Mane"
+        ]
+      },
+      {
+        "chip": "freehit",
+        "label": "Free Hit",
+        "count": 1,
+        "teams": [
+          "SixCars&AGrizzlyBear"
+        ]
+      }
+    ],
+    "totalTransfers": 80,
+    "standings": [
+      {
+        "rank": 1,
+        "team": "Laurent's Team",
+        "manager": "Laurent Grill",
+        "total": 385,
+        "gwPts": 43,
+        "move": 0
+      },
+      {
+        "rank": 2,
+        "team": "Calafiori Dreaming",
+        "manager": "Aaref Hilaly",
+        "total": 373,
+        "gwPts": 51,
+        "move": 2
+      },
+      {
+        "rank": 3,
+        "team": "KT BlueCo FFH",
+        "manager": "Whitney Baxter",
+        "total": 370,
+        "gwPts": 53,
+        "move": 2
+      },
+      {
+        "rank": 4,
+        "team": "Mind over Mata",
+        "manager": "Sriram Krishnan",
+        "total": 368,
+        "gwPts": 44,
+        "move": -1
+      },
+      {
+        "rank": 5,
+        "team": "Baba Marmoush",
+        "manager": "Warren Loegering",
+        "total": 363,
+        "gwPts": 38,
+        "move": -3
+      },
+      {
+        "rank": 6,
+        "team": "chapter 1",
+        "manager": "Samir Sama",
+        "total": 356,
+        "gwPts": 43,
+        "move": 0
+      },
+      {
+        "rank": 7,
+        "team": "Evergreen Old Boys",
+        "manager": "Derrick Ko",
+        "total": 352,
+        "gwPts": 48,
+        "move": 1
+      },
+      {
+        "rank": 8,
+        "team": "Cunha Believe It",
+        "manager": "Tanay Jaipuria",
+        "total": 346,
+        "gwPts": 39,
+        "move": -1
+      },
+      {
+        "rank": 9,
+        "team": "champs again ole ole",
+        "manager": "RJ Halperin",
+        "total": 341,
+        "gwPts": 42,
+        "move": 0
+      },
+      {
+        "rank": 10,
+        "team": "itscominghometousa",
+        "manager": "Luke Thompson",
+        "total": 333,
+        "gwPts": 38,
+        "move": 1
+      },
+      {
+        "rank": 11,
+        "team": "Swart Rangers FC",
+        "manager": "George Benton",
+        "total": 332,
+        "gwPts": 35,
+        "move": -1
+      },
+      {
+        "rank": 12,
+        "team": "Youriallycost35",
+        "manager": "Sanjay Reddy",
+        "total": 330,
+        "gwPts": 44,
+        "move": 0
+      },
+      {
+        "rank": 13,
+        "team": "<3teta",
+        "manager": "Sunil Chhaya",
+        "total": 321,
+        "gwPts": 45,
+        "move": 1
+      },
+      {
+        "rank": 14,
+        "team": "Portspooluva",
+        "manager": "Tyler Crown",
+        "total": 317,
+        "gwPts": 55,
+        "move": 3
+      },
+      {
+        "rank": 15,
+        "team": "SixCars&AGrizzlyBear",
+        "manager": "Chris Hollindale",
+        "total": 316,
+        "gwPts": 40,
+        "move": 0
+      },
+      {
+        "rank": 16,
+        "team": "Show Me The Mane",
+        "manager": "Damir Becirovic",
+        "total": 315,
+        "gwPts": 47,
+        "move": 0
+      },
+      {
+        "rank": 16,
+        "team": "Corner Kick FC",
+        "manager": "Peter Lenke",
+        "total": 315,
+        "gwPts": 33,
+        "move": -3
+      },
+      {
+        "rank": 18,
+        "team": "Young Guns",
+        "manager": "Ali Afridi",
+        "total": 313,
+        "gwPts": 55,
+        "move": 0
+      },
+      {
+        "rank": 19,
+        "team": "State of the Arteta",
+        "manager": "Nabeel Hyatt",
+        "total": 306,
+        "gwPts": 56,
+        "move": 0
+      },
+      {
+        "rank": 20,
+        "team": "Bins & Biscuits",
+        "manager": "Billy Knutsen",
+        "total": 297,
+        "gwPts": 47,
+        "move": 0
+      },
+      {
+        "rank": 21,
+        "team": "saka potatoes",
+        "manager": "Sridhar Krishnan",
+        "total": 273,
+        "gwPts": 38,
+        "move": 0
+      }
+    ]
+  }
+}

@@ -168,9 +168,11 @@ state. Team names throughout link to that team's official FPL page for the
 gameweek in view; recap bullets are written as plain prose and the page
 linkifies any team name it recognises, so nobody hand-writes anchor tags.
 
-## Weekly update
+## Automatic updates
 
-See [ROUTINE.md](ROUTINE.md) for the exact recurring-check prompt.
+One Claude cloud routine rebuilds all three leagues every day and republishes
+a tracker only when a new gameweek has finalised. See [ROUTINE.md](ROUTINE.md)
+for where it runs, what each run does and how to check on it.
 
 ## Where this lives
 
@@ -178,6 +180,6 @@ Its own repo: <https://github.com/CrenshawCrocodile/epl_championship_fantasy>
 (relocated out of the pickem-war-room repo on 2026-09-07 — it was unrelated to
 that Next.js/Vercel betting app and just cluttered it). Kept separate from
 pickem-war-room and from `gunnersdelight` (the Rosner's Relegation tracker), so
-each FPL tracker lives in its own repo. Clone this repo wherever the scheduled
-task runs; every build recomputes the season from the API, so there is no local
+each FPL tracker lives in its own repo. The cloud routine clones this repo fresh
+on each run; every build recomputes the season from the API, so there is no local
 state to carry between machines.

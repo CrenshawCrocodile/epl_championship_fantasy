@@ -14,7 +14,7 @@ One **Claude cloud routine** covers all three leagues:
 [FPL league trackers (Championship, League One, Premier League)](https://claude.ai/code/routines/trig_01NDZMDcHDoJXZhksbbi65PS).
 It runs in Anthropic's cloud against a fresh clone of this repo, so no Mac has
 to be awake. It was created on 2026-10-07 and replaces three separate Mac
-scheduled tasks (see "The old Mac tasks" below).
+scheduled tasks, now disabled (see "The old Mac tasks" below).
 
 - **Schedule: daily at 10:00 UTC.** A run that finds no newly finalised
   gameweek publishes nothing, commits nothing and sends nothing, so the extra
@@ -91,11 +91,13 @@ the routine), then bring this description back in line.
 
 `fpl-championship-tracker`, `fpl-league-one-tracker` and
 `fpl-premier-league-tracker` were Claude desktop scheduled tasks on Lyle's
-Mac, staggered on Tuesday mornings Pacific. They were left enabled as a
-fallback while the cloud routine proved itself; they cannot collide with it,
-because it runs earlier in the day and they stop when the page is already
-current. They do not push recap files. Disable them once the cloud routine
-has published a gameweek cleanly.
+Mac, staggered on Tuesday mornings Pacific. They were disabled on 2026-10-07,
+the day the cloud routine was created, and are paused rather than deleted.
+The cloud routine is the only thing updating the trackers. If it ever fails
+to publish, the fallback is to re-enable these tasks from the desktop app's
+scheduled tasks list or to run a build by hand (see "Checking on it"). They
+do not push recap files, so a week published by one of them needs its
+`gw<N>.json` committed separately.
 
 ## Notes for whoever maintains this
 
